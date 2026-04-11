@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# mirrored site (run npm run scrape)
+/cache/
+
+# Cursor / IDE
+.cursor/
+
+# Next.js app in VERCEL/ (separate install & build)
+VERCEL/node_modules/
+VERCEL/.next/

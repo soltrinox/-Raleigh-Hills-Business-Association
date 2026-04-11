@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raleigh Hills Business Association — Next.js mirror
 
-## Getting Started
+Static Next.js (App Router) site with **Tailwind CSS**, **DaisyUI**, and **@tailwindcss/typography**. HTML is mirrored from [raleighhillsbusinessassn.org](https://raleighhillsbusinessassn.org/) via sitemap, cached under `cache/` (gitignored), and converted to JSON under `content/` for rendering and SEO.
 
-First, run the development server:
+## Prerequisites
+
+- Node 20+
+- npm (or swap commands for pnpm/yarn)
+
+## Content pipeline
+
+1. **`npm run scrape`** — Fetches `sitemap.xml` (including nested sitemaps), downloads each allowed page with a polite delay, stores HTML in `cache/site/pages/`, and writes `cache/site/manifest.json`. Skips `/wp-admin/` (except patterns allowed by the plan). Uses `ETag` / `Last-Modified` to skip unchanged files when headers repeat.
+2. **`npm run extract`** — Reads the cache, extracts main column HTML with Cheerio (strips `script` / `iframe` / forms), runs a small cleanup pass (decorative lines, empty blocks, lazy `img`), writes `content/pages/*.json`, `content/manifest.json`, **`content/nav.all.json`** (every mirrored path), and merges extracted date hints into `content/events.json` while preserving the `manual` array. **`content/nav.primary.json`** is hand-curated for the header; extract does not overwrite it. If `nav.all.json` is missing, the app falls back to legacy `content/nav.json` for the drawer “More pages” list.
+3. **`npm run extract:bundle`** *(optional but included in `content:update`)* — Writes **`content/site.bundle.json`**: one file with `generatedAt`, `pages[]` (each page has `id`, `path`, `sourceUrl`, `title`, `description`, **`textPlain`** collapsed whitespace, and **`blocks`** — ordered `heading` / `paragraph` / `list` / `blockquote` / `code` / `image` / `hr` with minimal fields), plus embedded **`nav`** (same shape as `nav.all.json`) and **`events`** (`manual` preserved from `events.json`, `events` auto-extracted, `generatedAt`). The Next app still loads per-page JSON from `content/pages/`; the bundle is for external publishers or tooling. Flags: `--include-html` adds `htmlMain` per page for debugging; `--minify` emits one-line JSON.
+
+One shot:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run content:update
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After updating content, rebuild or refresh dev:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Manual events
 
-## Learn More
+Edit **`content/events.json`**: keep recurring or curated rows under **`manual`**. Re-running **`npm run extract`** preserves `manual` and refreshes the `events` array (auto-extracted only). The app merges `manual` + `events` at runtime (`lib/events.ts`).
 
-To learn more about Next.js, take a look at the following resources:
+## Local development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push the repo and import the project in [Vercel](https://vercel.com/).
+2. Framework preset: **Next.js** (default).
+3. No secrets are required for the static content build. Set **`NEXT_PUBLIC_SITE_URL`** to your production URL so `app/sitemap.ts` emits correct absolute URLs (see `env.example`).
+4. **CI option:** Add a build step `npm run content:update && npm run build` if you want every deploy to re-fetch the live site (slower, depends on the origin being up). Otherwise commit `content/` after running the pipeline locally.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Layout of the repo
+
+| Path | Role |
+|------|------|
+| `scripts/scrape-site.ts` | Sitemap crawler |
+| `scripts/extract-content.ts` | HTML → per-page JSON |
+| `scripts/extract-content-bundle.ts` | Cache → single `site.bundle.json` |
+| `cache/` | Raw mirror (ignored by git) |
+| `content/` | Data for Next (pages, nav, events, manifest) |
+| `app/` | Routes: `/`, `/calendar`, `[...slug]`, `sitemap.xml` |
+| `lib/content.ts`, `lib/events.ts` | Loaders + recurring expansion |
+
+## Compliance
+
+Use the crawler only for migration or archival you are authorized to perform. Respect `robots.txt` and site terms.

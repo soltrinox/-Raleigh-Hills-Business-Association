@@ -1,0 +1,762 @@
+{
+  "manual": [
+    {
+      "id": "sample-board-2026-05",
+      "title": "Board meeting (sample)",
+      "start": "2026-05-14T17:00:00.000Z",
+      "end": "2026-05-14T18:30:00.000Z",
+      "description": "Placeholder event — replace with real dates after extract or edit here.",
+      "confidence": "high"
+    },
+    {
+      "id": "sample-second-wed",
+      "title": "Monthly networking (2nd Wednesday — sample recurring)",
+      "start": "2026-04-09T16:00:00.000Z",
+      "recurringRule": "2nd Wednesday",
+      "description": "Demonstrates recurring expansion for simple nth-weekday rules.",
+      "confidence": "medium"
+    }
+  ],
+  "generatedAt": "2026-04-11T21:01:54.605Z",
+  "events": [
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/-20260418-0",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "bae1b545998293c425bccbeb6e\nSAVE THE DATE\nOur 14th Annual Recycle/Shred Event is April 18, 2026\nPrint a Flyer \nWE HAVE IT COVERED!! A BIG THANK YOU for our Sponsors to generously donated toward the Shr",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/-20260418-1",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Outreach/Events\n\n\n\n\nSAVE THE DATE\n\n\n14th Annual RECYCLE/SHRED EVENT\n\n\nSATURDAY, APRIL 18, 2026 - 9am to Noon\n\n\n\n\nDonations can be paid by using our QR code, check or cash. Let Mary or Bev know if you",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-132639",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.822Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "EVERY 2nd WEDNESDAY",
+      "description": "due on June 1st of each year.\nMEMBER SPOTLIGHTS VIA ZOOM - EVERY 2nd WEDNESDAY 8-9:00 AM\nMay: Jon Cohen, Jon Cohen@Windermere Realty Trust."
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-135444",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.822Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "GS ARE OPEN TO THE PUBLIC\nOur member/speaker meeting is the 2nd Wednesday of each Month at 8:00-9:00am\nAt these meetings we showcase a RHBA"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-135669",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.822Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "lcome\n8am to 9am Please Join us On\nZoom\nRHBA Member Meeting 2nd Wednesday\nRHBA Board Zoom meeting the 4th Wednesday of the month from 8:00 -"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-135711",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.823Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "4th Wednesday",
+      "description": "BA Member Meeting 2nd Wednesday\nRHBA Board Zoom meeting the 4th Wednesday of the month from 8:00 - 9:00am, unless there is a special request"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-136208",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.823Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "1st Wednesday",
+      "description": "your table.\n~~~~~~~~~~~~~~~~~~~~~\nRHBA COFFEE MEETUP - The 1st Wednesday of the month.\n\n10:00-11:00am\nAt the Coffee Cart inside Westside Wi"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-136353",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.823Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "Every 3rd Wednesday",
+      "description": "ext to Advance Camera - 8122 SW BHH/97225\n\n\n~~~~~~~~~~~~~~~\nEvery 3rd Wednesday\nNo-Host Lunch Meetup Noon to 1pm\nEastern Pearl, 8651 SW Cany"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/-137683",
+      "title": "| Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.823Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/",
+      "confidence": "low",
+      "recurringRule": "3rd Thursday",
+      "description": "d Collection and Styrofoam On-going Recycling every 1st and 3rd Thursday, 10:00 - 11:30am. East Parking lot. Food donations benefit St. Matt"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/area-history/-18290916-0",
+      "title": "Area History | Raleigh Hills Business Association",
+      "start": "1829-09-16T18:00:00.000Z",
+      "description": "12th of October, 1827, and that of the mother in Jefferson county, Indiana, on September 16, 1829.They were married in the latter county on the 9th of January, 1848, but began their domestic life in",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/area-history/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/business-builder/-20260328-0",
+      "title": "Business Builder | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Uncategorized\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\tLet’s help our member",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/business-builder/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/christine-jarski-cj-designs-decorating-den-interiors/-20260328-0",
+      "title": "Christine Jarski – CJ Designs, Decorating Den Interiors | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Member Profile, Speaker Spotlight",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/christine-jarski-cj-designs-decorating-den-interiors/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/coffee-meetup/-20260328-0",
+      "title": "COFFEE MEETUP | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event, Networking Coffee\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\tRHBA COFFE",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/coffee-meetup/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/coffee-meetup/-3743",
+      "title": "COFFEE MEETUP | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.935Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/coffee-meetup/",
+      "confidence": "low",
+      "recurringRule": "1st Wednesday",
+      "description": "siness Association\",\"description\":\"RHBA COFFEE MEETUP - The 1st Wednesday of the month. 10:00-11:00am At the Coffee Cart inside Westside Win"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/coffee-meetup/-133694",
+      "title": "COFFEE MEETUP | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:53.935Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/coffee-meetup/",
+      "confidence": "low",
+      "recurringRule": "1st Wednesday",
+      "description": "RHBA COFFEE MEETUP – The 1st Wednesday of the month.\n\n10:00-11:00am\nAt the Coffee Cart inside Westside Wi"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/community-support/-20240420-0",
+      "title": "Community-Support | Raleigh Hills Business Association",
+      "start": "2024-04-20T18:00:00.000Z",
+      "description": "mmunity stewards we are offering Sponsorship opportunities for the Shred Event, April 20, 2024 from 9am to Noon at the AAA Office Building on Apple Way. Each sponsor who donates to this event will hav",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/community-support/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/community-support/-20240420-1",
+      "title": "Community-Support | Raleigh Hills Business Association",
+      "start": "2024-04-20T18:00:00.000Z",
+      "description": "mmunity stewards we are offering Sponsorship opportunities for the Shred Event, April 20, 2024 from 9am to Noon at the AAA Office Building on Apple Way.\n \n \n\n\n\n\tEach sponsor who donates to this event",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/community-support/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/eric-zimmerman-acmb-digital-systems/-20260328-0",
+      "title": "Eric Zimmerman, ACMB Digital Systems | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Member Profile, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNo Co",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/eric-zimmerman-acmb-digital-systems/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/erik-leland-realty-first/-20260328-0",
+      "title": "Erik Leland, Realty First | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Member Profile, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\tProviding expe",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/erik-leland-realty-first/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-1871",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "1st Wednesday",
+      "description": "Business Association\",\"description\":\"MONTHLY COFFEE MEETUP 1st Wednesday of the month Business Builder Meetup! 10:00 - 11:00 am Locations a"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-2145",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "~~~~~~~~~~~~~~~~~~~~~RHBA Zoom Member\\/Speaker meet-up, the 2nd Wednesday of the month! Guests are Welcome! The member business meeting is t"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-133172",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "1st Wednesday",
+      "description": "Events\n\n\t\n\n\t\n\t\t \nMONTHLY COFFEE MEETUP\n1st Wednesday of the month Business Builder Meetup!\n10:00 - 11:00 am\nLocations a"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-133447",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "~~~~~~~~~~~~~~~~~~~~~\nRHBA Zoom Member/Speaker meet-up, the 2nd Wednesday of the month!\nGuests are Welcome!\nThe member business meeting is t"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-134261",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "3rd Wednesday",
+      "description": "669 900 6833\nCasual, Get to Know You\nMonthly No-Host Lunch\n3rd Wednesday of the month\nGuests are Welcome!\nOffering a second monthly opportu"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/events-past-present/-134580",
+      "title": "Events | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.011Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/",
+      "confidence": "low",
+      "recurringRule": "Every 3rd Wednesday",
+      "description": "know one another, and meeting others to generate referrals.\nEvery 3rd Wednesday at Noon, RHBA lunch NEW LOCATION for January at The Eastern"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/events-past-present/rhba-community-fair/-20180421-0",
+      "title": "PAST EVENT Shred/Recycle 2017 | Raleigh Hills Business Association",
+      "start": "2018-04-21T18:00:00.000Z",
+      "description": "arabineer\n\n\nSo save the date we’ll be holding our 5th Annual Event next year on April 21, 2018….\n \nRaleigh Hills Business Association Mission: To support the community of Raleigh Hills; to promote a v",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/rhba-community-fair/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/events-past-present/updates/-20140611-0",
+      "title": "PAST EVENTS 2014-15 Misc. | Raleigh Hills Business Association",
+      "start": "2014-06-11T18:00:00.000Z",
+      "description": "Co. Thank you ladies for your dedication and thank you to all who turned out.\n\nJune 11, 2014 RHBA Annual Meeting \nAnnual Report\nApril 26, 2014 Shred Event Raleigh Hills\nOur first Shred Event was a hu",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/updates/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/events-past-present/updates/-20140426-1",
+      "title": "PAST EVENTS 2014-15 Misc. | Raleigh Hills Business Association",
+      "start": "2014-04-26T18:00:00.000Z",
+      "description": "nk you to all who turned out.\n\nJune 11, 2014 RHBA Annual Meeting \nAnnual Report\nApril 26, 2014 Shred Event Raleigh Hills\nOur first Shred Event was a huge success. We send a bigh thank you to AAA Autos",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/events-past-present/updates/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/explore-membership-with-rhba/-20260328-0",
+      "title": "Explore Membership with RHBA | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNo Comments",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/explore-membership-with-rhba/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/jon-cohen-jon-cohenwindermere-realty-trust/-20260328-0",
+      "title": "Jon Cohen, Jon Cohen@Windermere Realty Trust | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Speaker Spotlight\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\tMay: Jon Cohen, Jon Coh",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/jon-cohen-jon-cohenwindermere-realty-trust/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/jon-cohen-of-jon-cohen-windermere-realty-trust/-20260328-0",
+      "title": "Jon Cohen of Jon Cohen @ Windermere Realty Trust | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Member Profile, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\tJon Cohen of J",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/jon-cohen-of-jon-cohen-windermere-realty-trust/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/member-bulletin-board/-20260328-0",
+      "title": "Member Bulletin Board | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Uncategorized\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\tOngoing or Upcoming E",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/member-bulletin-board/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/member-bulletin-board/-134508",
+      "title": "Member Bulletin Board | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.163Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/member-bulletin-board/",
+      "confidence": "low",
+      "recurringRule": "3rd Thursday",
+      "description": "d Collection and Styrofoam On-going Recycling every 1st and 3rd Thursday, 10:00 – 11:30am. East Parking lot. Food donations benefit St. Matt"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/-20260328-0",
+      "title": "Member Spotlights via Zoom | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Uncategorized\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNo Comments",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/-3907",
+      "title": "Member Spotlights via Zoom | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.183Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/",
+      "confidence": "low",
+      "recurringRule": "EVERY 2nd WEDNESDAY",
+      "description": "ss Association\",\"description\":\"MEMBER SPOTLIGHTS VIA ZOOM - EVERY 2nd WEDNESDAY 8-9:00 AM\",\"inLanguage\":\"en-US\",\"isPartOf\":{\"@id\":\"https:\\/\\"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/-133444",
+      "title": "Member Spotlights via Zoom | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.184Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/member-spotlights-via-zoom/",
+      "confidence": "low",
+      "recurringRule": "EVERY 2nd WEDNESDAY",
+      "description": "MEMBER SPOTLIGHTS VIA ZOOM – EVERY 2nd WEDNESDAY 8-9:00 AM\nRuthann Marquis, Valley Community Presbyterian\n\nJo"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/no-host-lunch-meetup/-20260328-0",
+      "title": "No-Host Lunch Meetup | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Lunch Meetu",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/no-host-lunch-meetup/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/no-host-lunch-meetup/-3706",
+      "title": "No-Host Lunch Meetup | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.353Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/no-host-lunch-meetup/",
+      "confidence": "low",
+      "recurringRule": "Every 3rd Wednesday",
+      "description": "Meetup | Raleigh Hills Business Association\",\"description\":\"Every 3rd Wednesday No-Host Lunch Meetup Noon to 1pm Eastern Pearl, 8651 SW Cany"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/no-host-lunch-meetup/-133641",
+      "title": "No-Host Lunch Meetup | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.353Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/no-host-lunch-meetup/",
+      "confidence": "low",
+      "recurringRule": "Every 3rd Wednesday",
+      "description": "gged with Lunch Meetup\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\tEvery 3rd Wednesday\nNo-Host Lunch Meetup Noon to 1pm\nEastern Pearl, 8651 SW Cany"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-0",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-1",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "nt-happening-april-18-2026\\/#article\",\"name\":\"Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association\",\"headline\":\"Recycle and Shred Event happening April 18, 2026\",\"auth",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-2",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "leigh Hills Business Association\",\"headline\":\"Recycle and Shred Event happening April 18, 2026\",\"author\":{\"@id\":\"https:\\/\\/raleighhillsbusinessassn.org\\/author\\/joyce\\/#author\"},\"publisher\":{\"@id\":\"ht",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-3",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "t-happening-april-18-2026\\/#listItem\",\"name\":\"Recycle and Shred Event happening April 18, 2026\"},\"previousItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/raleighhillsbusinessassn.org#listItem\",\"name\":\"Home",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-4",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "pril-18-2026\\/#listItem\",\"position\":3,\"name\":\"Recycle and Shred Event happening April 18, 2026\",\"previousItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/raleighhillsbusinessassn.org\\/category\\/event\\/#list",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-5",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "hred-event-happening-april-18-2026\\/\",\"name\":\"Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association\",\"description\":\"Our 14th Annual Recycle\\/Shred Event is April 18, 20",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-6",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ls Business Association\",\"description\":\"Our 14th Annual Recycle\\/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 Print a Flyer Secur",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-7",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Recycle and Shred Event happening April 18, 2026\n\n\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tdel Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260328-8",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Environment, Event, Rec",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/-20260418-9",
+      "title": "Recycle and Shred Event happening April 18, 2026 | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "red\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\tOur 14th Annual Recycle/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225\nPrint a Flyer \nSecu",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/recycle-and-shred-event-happening-april-18-2026/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/rh-parr/-20260328-0",
+      "title": "RH PARR | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Member Profile, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\tNew Manager, R",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rh-parr/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/west-slope-community-library-may-2017/-20170329-0",
+      "title": "West Slope Community Library | Raleigh Hills Business Association",
+      "start": "2017-03-29T18:00:00.000Z",
+      "description": "Veronica Eden\n·         PJ Bentley\n·         Kirsten Freeman-Benson\n \nPosted March 29, 2017",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/west-slope-community-library-may-2017/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/-20170228-0",
+      "title": "Westside Economic Alliance | Raleigh Hills Business Association",
+      "start": "2017-02-28T18:00:00.000Z",
+      "description": "mbus Ave., Ste. K-12\nTigard, Oregon 97223\nhttp://westsidealliance.org/\n\n\nPosted February 28, 2017",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/-133840",
+      "title": "Westside Economic Alliance | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.477Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/",
+      "confidence": "low",
+      "recurringRule": "4th Thursday",
+      "description": "’t been set yet.  Our Breakfast Forums are usually held the 4th Thursday of the month (10 months out of the year) at 7:30 a.m. at the Embass"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/-134199",
+      "title": "Westside Economic Alliance | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.477Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-non-profit-member-spotlight-stories/westside-economic-alliance-march-17/",
+      "confidence": "low",
+      "recurringRule": "4th Thursday",
+      "description": "lf Scramble.  We also don’t host one in November, since the 4th Thursday is Thanksgiving, so we usually combine November and December, hosti"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/rhba-welcomes-new-members/-20260328-0",
+      "title": "RHBA Welcomes New Members | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Uncategorized\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\n\t\t\t\n\n\n\n\n\n\t\n\n\n\n\n\t\nMeet the newest memb",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-welcomes-new-members/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/-20260328-0",
+      "title": "RHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNo Comments",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/-4129",
+      "title": "RHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.499Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "S ARE OPEN TO THE PUBLIC Our member\\/speaker meeting is the 2nd Wednesday of each Month at 8:00-9:00am At these meetings we showcase a RHBA"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/-4362",
+      "title": "RHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.499Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/",
+      "confidence": "low",
+      "recurringRule": "4th Wednesday",
+      "description": "m to 9am Please Join us On Zoom RHBA Board Zoom meeting the 4th Wednesday of the\",\"inLanguage\":\"en-US\",\"isPartOf\":{\"@id\":\"https:\\/\\/raleighh"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/-134403",
+      "title": "RHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.500Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/",
+      "confidence": "low",
+      "recurringRule": "2nd Wednesday",
+      "description": "GS ARE OPEN TO THE PUBLIC\nOur member/speaker meeting is the 2nd Wednesday of each Month at 8:00-9:00am\nAt these meetings we showcase a RHBA"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/-134636",
+      "title": "RHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.500Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/rhba-zoom-meetings-are-open-to-the-public/",
+      "confidence": "low",
+      "recurringRule": "4th Wednesday",
+      "description": "m to 9am Please Join us On Zoom\nRHBA Board Zoom meeting the 4th Wednesday of the month from 8:00 – 9:00am, unless there is a special request"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/ruthann-marquis-valley-community-presbyterian/-20260328-0",
+      "title": "Ruthann Marquis, Valley Community Presbyterian | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Speaker Spotlight\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNo Comments",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/ruthann-marquis-valley-community-presbyterian/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/-20220423-0",
+      "title": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "start": "2022-04-23T18:00:00.000Z",
+      "description": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/-20220423-1",
+      "title": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "start": "2022-04-23T18:00:00.000Z",
+      "description": "23-2022\\/#listItem\",\"name\":\"Save the Date Annual Shred\\/Recycle Event, Saturday April 23, 2022\"}},{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/raleighhillsbusinessassn.org\\/save-the-date-annual-shred-recycle-",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/-20220423-2",
+      "title": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "start": "2022-04-23T18:00:00.000Z",
+      "description": "tItem\",\"position\":2,\"name\":\"Save the Date Annual Shred\\/Recycle Event, Saturday April 23, 2022\",\"previousItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/raleighhillsbusinessassn.org#listItem\",\"name\":\"Home\"",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/-20220423-3",
+      "title": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "start": "2022-04-23T18:00:00.000Z",
+      "description": "ay-april-23-2022\\/\",\"name\":\"Save the Date Annual Shred\\/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association\",\"description\":\"Annual Shred\\/Recycle Event Saturday, April 23rd fro",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/-20220423-4",
+      "title": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022 | Raleigh Hills Business Association",
+      "start": "2022-04-23T18:00:00.000Z",
+      "description": "Save the Date Annual Shred/Recycle Event, Saturday April 23, 2022\n\n\t\n\n\t\n\t\t\nAnnual Shred/Recycle Event\nSaturday, April 23rd from 9 am to Noon\nAAA of Oregon parking lot: 855",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/save-the-date-annual-shred-recycle-event-saturday-april-23-2022/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/shred-event-2/-20260418-0",
+      "title": "Recycle/Shred Event | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "tion\",\"description\":\"SAVE THE DATE Our 14th Annual Recycle\\/Shred Event will be April 18, 2026 We will be having our event from 9am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 RHBA",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/shred-event-2/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/shred-event-2/-20260418-1",
+      "title": "Recycle/Shred Event | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "e/Shred Event\n\n\t\n\n\t\n\t\tSAVE THE DATE\nOur 14th Annual Recycle/Shred Event will be April 18, 2026\n\nWe will be having our event from 9am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225\nRHBA",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/shred-event-2/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/application/-20260328-0",
+      "title": "Application | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Application, Membe",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/application/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/environment/-20260418-0",
+      "title": "Environment | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Environment\n\t\t\t\t\t\n\t\t\n\t\n\t\t\t\n\t\t\t\t\t\n\t\n\t\t\n\t\t\n\n\t\t\n\nRecycle and Shred Event happening April 18, 2026\n\n\n\n\n\t\t\t\t\n\t\t\t\tBy \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tdel Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/environment/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/environment/-20260328-1",
+      "title": "Environment | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Environment, Event, Rec",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/environment/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/environment/-20260418-2",
+      "title": "Environment | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Our 14th Annual Recycle/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 Print a Flyer Secur",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/environment/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/environment/-20260418-3",
+      "title": "Environment | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ure shred for a maximum of  THREE bags or …\n  Recycle and Shred Event happening April 18, 2026 Read more »",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/environment/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/event/-20260418-0",
+      "title": "Event | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Tag: Event\n\t\t\t\t\t\n\t\t\n\t\n\t\t\t\n\t\t\t\t\t\n\t\n\t\t\n\t\t\n\n\t\t\n\nRecycle and Shred Event happening April 18, 2026\n\n\n\n\n\t\t\t\t\n\t\t\t\tBy \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tdel Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/event/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/event/-20260328-1",
+      "title": "Event | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Environment, Event, Rec",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/event/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/event/-20260418-2",
+      "title": "Event | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Our 14th Annual Recycle/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 Print a Flyer Secur",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/event/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/event/-20260418-3",
+      "title": "Event | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ure shred for a maximum of  THREE bags or …\n  Recycle and Shred Event happening April 18, 2026 Read more »",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/event/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/lunch-meetup/-20260328-0",
+      "title": "Lunch Meetup | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event, Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Lunch Meetu",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/lunch-meetup/",
+      "confidence": "low"
+    },
+    {
+      "id": "recur-https://raleighhillsbusinessassn.org/tag/lunch-meetup/-131077",
+      "title": "Lunch Meetup | Raleigh Hills Business Association",
+      "start": "2026-04-11T21:01:54.574Z",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/lunch-meetup/",
+      "confidence": "low",
+      "recurringRule": "Every 3rd Wednesday",
+      "description": "unch Meetup\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\t\n\t\n\n\t\t\t\t\t\n\t\t\n\t\n\n\t\n\n\n\t\n\t\tEvery 3rd Wednesday No-Host Lunch Meetup Noon to 1pm Eastern Pearl, 8651 SW Cany"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/membership/-20260328-0",
+      "title": "Membership | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Membership\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Application, Membe",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/membership/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/recycle/-20260418-0",
+      "title": "Recycle | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ag: Recycle\n\t\t\t\t\t\n\t\t\n\t\n\t\t\t\n\t\t\t\t\t\n\t\n\t\t\n\t\t\n\n\t\t\n\nRecycle and Shred Event happening April 18, 2026\n\n\n\n\n\t\t\t\t\n\t\t\t\tBy \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tdel Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/recycle/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/recycle/-20260328-1",
+      "title": "Recycle | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Environment, Event, Rec",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/recycle/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/recycle/-20260418-2",
+      "title": "Recycle | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Our 14th Annual Recycle/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 Print a Flyer Secur",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/recycle/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/recycle/-20260418-3",
+      "title": "Recycle | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ure shred for a maximum of  THREE bags or …\n  Recycle and Shred Event happening April 18, 2026 Read more »",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/recycle/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/shred/-20260418-0",
+      "title": "Shred | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Tag: Shred\n\t\t\t\t\t\n\t\t\n\t\n\t\t\t\n\t\t\t\t\t\n\t\n\t\t\n\t\t\n\n\t\t\n\nRecycle and Shred Event happening April 18, 2026\n\n\n\n\n\t\t\t\t\n\t\t\t\tBy \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tdel Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/shred/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/shred/-20260328-1",
+      "title": "Shred | Raleigh Hills Business Association",
+      "start": "2026-03-28T18:00:00.000Z",
+      "description": "del Rosario\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\tPosted on March 28, 2026\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tPosted in Event\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tTagged with Environment, Event, Rec",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/shred/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/shred/-20260418-2",
+      "title": "Shred | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "Our 14th Annual Recycle/Shred Event is April 18, 2026. The event hours: 9 am to Noon in the AAA Parking lot on 8555 SW Apple Way, PDX 97225 Print a Flyer Secur",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/shred/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/tag/shred/-20260418-3",
+      "title": "Shred | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "ure shred for a maximum of  THREE bags or …\n  Recycle and Shred Event happening April 18, 2026 Read more »",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/tag/shred/",
+      "confidence": "low"
+    },
+    {
+      "id": "auto-https://raleighhillsbusinessassn.org/welcome-to-raleigh-hills-business-association/-20260418-0",
+      "title": "Welcome to Raleigh Hills Business Association | Raleigh Hills Business Association",
+      "start": "2026-04-18T18:00:00.000Z",
+      "description": "lcomes New Members\n\n\n\n\n\nBusiness Builder\n\n\n\n\n\nRecycle and Shred Event happening April 18, 2026\n\n\n\n\n\nMember Spotlights via Zoom\n\n\n\n\n\nRHBA ZOOM MEETINGS ARE OPEN TO THE PUBLIC\n\n\n\n\n\nMember Bulletin Board",
+      "sourcePageUrl": "https://raleighhillsbusinessassn.org/welcome-to-raleigh-hills-business-association/",
+      "confidence": "low"
+    }
+  ]
+}

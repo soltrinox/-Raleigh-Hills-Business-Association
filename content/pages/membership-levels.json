@@ -1,0 +1,10 @@
+{
+  "id": "membership-levels",
+  "path": [
+    "membership-levels"
+  ],
+  "sourceUrl": "https://raleighhillsbusinessassn.org/membership-levels/",
+  "title": "Membership Levels | Raleigh Hills Business Association",
+  "description": "",
+  "htmlMain": "<div class=\"pmpro\">\n\t\t<section id=\"pmpro_levels\" class=\"pmpro_section\">\n\t\t<div class=\"pmpro_section_content\">\n\t\t\t\t\t\t\t\t<div id=\"pmpro_level_group-1\" class=\"pmpro_card pmpro_level_group\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pmpro_card_content\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<table class=\"pmpro_table pmpro_levels_table\">\n\t\t\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t\t<th>Level</th>\n\t\t\t\t\t\t\t\t\t\t<th>Price</th>\t\n\t\t\t\t\t\t\t\t\t\t<th><span class=\"screen-reader-text\">Action</span></th>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<tr id=\"pmpro_level-1\" class=\"pmpro_level\">\n\t\t\t\t\t\t\t\t\t\t<th data-title=\"Level\">RHBA Member</th>\n\t\t\t\t\t\t\t\t\t\t<td data-title=\"Price\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pmpro_level-price\"><strong>$25.00</strong> now and then <strong>$75.00 per Year</strong>. </p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t\t                \t\n\t\t\t\t\t\t\t\t\t\t\t<a aria-label=\"Select the RHBA Member membership level\" class=\"pmpro_btn pmpro_btn-select\" href=\"https://raleighhillsbusinessassn.org/membership-checkout/?pmpro_level=1\">Select</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div> <!-- end pmpro_card_content -->\n\t\t\t\t\t</div> <!-- end pmpro_card -->\n\t\t\t\t\t\t\t</div> <!-- end pmpro_section_content -->\n\t</section> <!-- end pmpro_section -->\n</div> <!-- end pmpro -->\n\n\t"
+}

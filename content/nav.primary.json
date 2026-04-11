@@ -1,0 +1,12 @@
+{
+  "links": [
+    { "href": "/", "label": "Home" },
+    { "href": "/calendar", "label": "Calendar" },
+    { "href": "/about-rhba", "label": "About" },
+    { "href": "/business-directory", "label": "Directory" },
+    { "href": "/application", "label": "Membership" },
+    { "href": "/contact-us", "label": "Contact" },
+    { "href": "/coffee-meetup", "label": "Coffee meetup" },
+    { "href": "/community-support", "label": "Community" }
+  ]
+}
