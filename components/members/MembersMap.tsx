@@ -70,8 +70,8 @@ export type MembersMapProps = {
 export function MembersMap({ members, selectedId, focusTarget, onMarkerClick }: MembersMapProps) {
   return (
     <div className="overflow-hidden rounded-xl border border-border bg-muted/30 shadow-sm">
-      <div className="flex items-center justify-between gap-2 border-b border-border bg-card px-3 py-2 text-xs text-muted-foreground">
-        <span className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-card px-3 py-2 text-xs text-muted-foreground">
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <span className="flex items-center gap-1.5">
             <span className="inline-block size-2.5 rounded-full bg-green-600 ring-1 ring-white" aria-hidden />
             Members
@@ -81,12 +81,12 @@ export function MembersMap({ members, selectedId, focusTarget, onMarkerClick }: 
             Selected
           </span>
         </span>
-        <span>{members.length} on map</span>
+        <span className="shrink-0 tabular-nums">{members.length} on map</span>
       </div>
       <MapContainer
         center={DEFAULT_CENTER}
         zoom={DEFAULT_ZOOM}
-        className="z-0 h-full min-h-[300px] w-full md:min-h-[440px]"
+        className="z-0 h-[min(52vh,320px)] min-h-[240px] w-full sm:h-[min(50vh,400px)] sm:min-h-[300px] lg:h-[min(48vh,480px)] lg:min-h-[380px]"
         scrollWheelZoom
       >
         <TileLayer

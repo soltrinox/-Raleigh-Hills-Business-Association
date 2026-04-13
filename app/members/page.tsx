@@ -23,8 +23,8 @@ export default function MembersPage() {
               Member directory
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-primary-foreground/85">
-              Explore members on the map, search and sort the list, and use your location to find
-              nearby businesses. Update listings by editing{' '}
+              Search and filter above the map, then browse members in the grid below. Use your
+              location to find nearby businesses. Update listings by editing{' '}
               <code className="rounded bg-primary-foreground/15 px-1.5 py-0.5 text-sm">
                 data/members.json
               </code>{' '}
