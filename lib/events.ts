@@ -1,6 +1,5 @@
-import { readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
 import { addMonths, endOfMonth, parseISO, startOfMonth, format, getDay } from "date-fns";
+import eventsJson from "@/data/events.json";
 
 export type StoredEvent = {
   id: string;
@@ -28,13 +27,9 @@ export type CalendarInstance = {
   resource?: { sourcePageUrl?: string; recurringRule?: string };
 };
 
-const contentRoot = join(process.cwd(), "content");
-
 export function loadRawEvents(): StoredEvent[] {
-  const p = join(contentRoot, "events.json");
-  if (!existsSync(p)) return [];
   try {
-    const data = JSON.parse(readFileSync(p, "utf8")) as EventsFile;
+    const data = eventsJson as EventsFile;
     const manual = Array.isArray(data.manual) ? data.manual : [];
     const auto = Array.isArray(data.events) ? data.events : [];
     return [...manual, ...auto];
@@ -43,7 +38,6 @@ export function loadRawEvents(): StoredEvent[] {
   }
 }
 
-/** Nth weekday (0=Sun .. 6=Sat) of month; returns null if invalid */
 function nthWeekdayOfMonth(year: number, monthIndex: number, weekday: number, n: number): Date | null {
   const start = startOfMonth(new Date(year, monthIndex, 1));
   let count = 0;
@@ -67,9 +61,6 @@ const WEEKDAYS: Record<string, number> = {
   saturday: 6,
 };
 
-/**
- * Expands simple "2nd Wednesday" style rules for the next `horizonMonths` months.
- */
 export function expandRecurringEvents(
   events: StoredEvent[],
   from: Date = new Date(),

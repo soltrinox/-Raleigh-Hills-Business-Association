@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { loadRawEvents, expandRecurringEvents } from "@/lib/events";
+import Link from "next/link";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { expandRecurringEvents, loadRawEvents } from "@/lib/events";
 import { CalendarClient } from "./CalendarClient";
-import { ContentZone } from "@/components/ContentZone";
-import { ContentStack } from "@/components/ContentStack";
-import { PageHeader } from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Calendar",
-  description: "RHBA meetings and events (from mirrored content + manual entries).",
+  description: "RHBA meetings and events from mirrored content and manual entries.",
 };
 
 export default function CalendarPage() {
@@ -21,27 +21,43 @@ export default function CalendarPage() {
     resource: e.resource,
   }));
 
-  const calDescription = (
-    <>
-      Events come from automated extraction of cached pages and from the{" "}
-      <code className="rounded bg-base-200 px-1.5 py-0.5 text-sm">manual</code> array in{" "}
-      <code className="rounded bg-base-200 px-1.5 py-0.5 text-sm">content/events.json</code>. Edit that file to add or
-      fix dates.
-    </>
-  );
-
   return (
-    <ContentZone variant="wide">
-      <ContentStack>
-        <PageHeader title="Calendar" description={calDescription} />
-        <div className="min-w-0 overflow-x-auto">
-          <div className="card border border-base-300 bg-base-100 shadow-md">
-            <div className="card-body p-3 sm:p-6">
+    <div className="flex min-h-screen flex-col bg-background">
+      <Navigation />
+      <main className="flex-1">
+        <section className="bg-primary py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <h1 className="font-serif text-4xl font-bold text-primary-foreground md:text-5xl">
+              Calendar
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg text-primary-foreground/85">
+              Events come from automated extraction of cached pages and from the{" "}
+              <code className="rounded bg-primary-foreground/15 px-1.5 py-0.5 text-sm">
+                manual
+              </code>{" "}
+              array in{" "}
+              <code className="rounded bg-primary-foreground/15 px-1.5 py-0.5 text-sm">
+                data/events.json
+              </code>
+              . Edit that file to add or fix dates.
+            </p>
+          </div>
+        </section>
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-border bg-card p-4 shadow-sm sm:p-6">
               <CalendarClient events={serializable} />
             </div>
+            <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
+              Prefer the public site calendar?{" "}
+              <Link href="/events" className="text-primary underline-offset-4 hover:underline">
+                Events overview
+              </Link>
+            </p>
           </div>
-        </div>
-      </ContentStack>
-    </ContentZone>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

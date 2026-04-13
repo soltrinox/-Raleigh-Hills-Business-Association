@@ -46,6 +46,13 @@ next-env.d.ts
 # Cursor / IDE
 .cursor/
 
-# Next.js app in VERCEL/ (separate install & build)
-VERCEL/node_modules/
-VERCEL/.next/
+# v0 / local tooling noise (from prior template)
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+next.user-config.*
+
+.vscode/
+.idea/

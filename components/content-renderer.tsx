@@ -114,7 +114,7 @@ function RenderTextWithLinks({ text, links }: { text: string; links?: InlineLink
   }
 
   // Simple rendering - find and replace link text with actual links
-  let result = text
+  const result = text
   const elements: (string | ReactElement)[] = []
   let lastIndex = 0
 

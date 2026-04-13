@@ -38,9 +38,7 @@ export function CalendarClient({ events }: { events: SerializableEvent[] }) {
   );
 
   return (
-    <div
-      className="min-h-[560px] text-foreground [&_.rbc-toolbar]:mb-3 [&_.rbc-toolbar]:flex-wrap [&_.rbc-toolbar]:gap-2 [&_.rbc-toolbar_button]:rounded-md [&_.rbc-toolbar_button]:border [&_.rbc-toolbar_button]:border-border [&_.rbc-toolbar_button]:bg-background [&_.rbc-toolbar_button]:px-3 [&_.rbc-toolbar_button]:py-1.5 [&_.rbc-toolbar_button]:text-sm [&_.rbc-header]:border-border [&_.rbc-day-bg]:border-border [&_.rbc-time-content]:border-border [&_.rbc-time-slot]:border-border [&_.rbc-today]:bg-primary/10 [&_.rbc-off-range-bg]:bg-muted/50 [&_.rbc-event]:bg-primary [&_.rbc-event]:text-primary-foreground"
-    >
+    <div className="rbc-daisy min-h-[560px] text-base-content [&_.rbc-toolbar]:mb-3 [&_.rbc-toolbar]:flex-wrap [&_.rbc-toolbar]:gap-2 [&_.rbc-toolbar_button]:btn [&_.rbc-toolbar_button]:btn-sm [&_.rbc-header]:border-base-300 [&_.rbc-day-bg]:border-base-300 [&_.rbc-time-content]:border-base-300 [&_.rbc-time-slot]:border-base-300 [&_.rbc-today]:bg-primary/10 [&_.rbc-off-range-bg]:bg-base-200/50 [&_.rbc-event]:bg-primary [&_.rbc-event]:text-primary-content">
       <Calendar
         localizer={localizer}
         events={parsed}

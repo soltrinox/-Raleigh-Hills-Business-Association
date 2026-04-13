@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, business --prefersdark;
+}
+@plugin "@tailwindcss/typography";
+
+@plugin "daisyui/theme" {
+  name: "business";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-primary: oklch(55% 0.12 240);
+  --color-primary-content: oklch(98% 0.01 240);
+  --color-secondary: oklch(65% 0.08 200);
+  --color-accent: oklch(70% 0.15 160);
+  --color-neutral: oklch(30% 0.02 260);
+  --color-base-100: oklch(18% 0.02 260);
+  --color-base-200: oklch(22% 0.02 260);
+  --color-base-300: oklch(28% 0.02 260);
+  --color-base-content: oklch(92% 0.01 260);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+body {
+  font-family: inherit;
+  @apply text-base leading-relaxed text-base-content;
+}
