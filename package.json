@@ -11,6 +11,7 @@
     "members:extract": "node scripts/extract-directory-to-members.mjs",
     "members:extract:fast": "node scripts/extract-directory-to-members.mjs --no-geocode",
     "members:geocode": "node scripts/geocode-members.mjs",
+    "members:validate-geocode": "node scripts/validate-member-geocode.mjs",
     "deploy": "npx vercel deploy",
     "deploy:prod": "npx vercel deploy --prod"
   },

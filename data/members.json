@@ -2,6 +2,7 @@
   "generatedAt": "2026-04-13T09:25:08.483Z",
   "source": "https://raleighhillsbusinessassn.org/directory-2/",
   "geocoded": true,
+  "geocodeValidatedAt": "2026-04-13T09:41:00.000Z",
   "members": [
     {
       "id": "lddbd-182",
@@ -24,8 +25,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/ACMB-logo-screenshot.jpg",
       "website": "http://ACMBDigital.com",
       "phone": "971-507-2030",
-      "lat": 45.475874999999995,
-      "lng": -122.7524125
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-275",
@@ -83,8 +84,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Windermere-symbol-logo.png",
       "website": "http://amyrice.withwre.com/",
       "phone": "503-333-5519",
-      "lat": 45.4747875,
-      "lng": -122.752425
+      "lat": 45.529922,
+      "lng": -122.6838429
     },
     {
       "id": "lddbd-10",
@@ -142,8 +143,8 @@
       "address": "10445 SW Canyon Road, Suite 266, Beaverton, Oregon 97005",
       "website": "http://www.BooksenseLLC.com",
       "phone": "360-333-6877",
-      "lat": 45.473549999999996,
-      "lng": -122.7524375
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-215",
@@ -153,8 +154,8 @@
       "address": "8835 SW Canyon Lane, Suite 312, Portland, Oregon 97225",
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/scrolly-heart.jpg",
       "phone": "503-267-6126",
-      "lat": 45.4981875,
-      "lng": -122.7524375
+      "lat": 45.4992903,
+      "lng": -122.7678647
     },
     {
       "id": "lddbd-276",
@@ -163,8 +164,9 @@
       "description": "Organizing your home, your home office, no matter what space.",
       "address": "910 SW 91st #3, Portland, Oregon 97223",
       "phone": "503-890-9329",
-      "lat": 45.475525,
-      "lng": -122.752425
+      "lat": 45.4642,
+      "lng": -122.7705,
+      "geocodeNote": "Nominatim confuses SW/SE 91st; pin placed near 910 SW 91st Ave, 97223 (approx.)"
     },
     {
       "id": "lddbd-282",
@@ -199,8 +201,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/coordinated.PNG",
       "website": "http://coordinatedconsulting.com",
       "phone": "602-571-3587",
-      "lat": 45.488162499999994,
-      "lng": -122.7525125
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-256",
@@ -280,8 +282,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/DizonPhotography_logo.png",
       "website": "http://dizonphotography.com",
       "phone": "503 619-5757",
-      "lat": 45.487762499999995,
-      "lng": -122.752525
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-192",
@@ -327,8 +329,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Erik-Leland-Realty-First.png",
       "website": "http://Lelandnw.com",
       "phone": "503-200-9606",
-      "lat": 45.4758875,
-      "lng": -122.7524125
+      "lat": 45.4170233,
+      "lng": -122.730571
     },
     {
       "id": "lddbd-193",
@@ -350,8 +352,8 @@
       "address": "6500 SW Beaverton Hillsdale Hwy, #2, Portland, Oregon 97225",
       "website": "http://www.fineartstarts.org",
       "phone": "503-740-8220",
-      "lat": 45.47555,
-      "lng": -122.752425
+      "lat": 45.4867642,
+      "lng": -122.7440515
     },
     {
       "id": "lddbd-246",
@@ -373,8 +375,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/GardenHomeCommunityLibrary_logo.",
       "website": "http://www.gardenhomelibrary.org",
       "phone": "503-225-9932",
-      "lat": 45.478049999999996,
-      "lng": -122.75435
+      "lat": 45.4665316,
+      "lng": -122.7533262
     },
     {
       "id": "lddbd-229",
@@ -385,8 +387,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Screenshot-2024-04-24-092000.png",
       "website": "http://www.grovescapital.com",
       "phone": "971-336-4857",
-      "lat": 45.473625,
-      "lng": -122.7524375
+      "lat": 32.8300974,
+      "lng": -117.1459575
     },
     {
       "id": "lddbd-191",
@@ -397,8 +399,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/health-touch.png",
       "website": "http://www.healthtouchmassagecenter.com",
       "phone": "503-641-7743",
-      "lat": 45.489225,
-      "lng": -122.7525125
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-257",
@@ -409,8 +411,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/IPA-Physio-logo.jpg",
       "website": "http://ipa.physio/portland",
       "phone": "503-616-0313",
-      "lat": 45.4747625,
-      "lng": -122.752425
+      "lat": 45.4855655,
+      "lng": -122.7536137
     },
     {
       "id": "lddbd-165",
@@ -453,8 +455,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Screenshot-2025-03-18-085012.jpg",
       "website": "http://beverlymoser.johnlscott.com/home",
       "phone": "503-789-5417",
-      "lat": 45.4747,
-      "lng": -122.752425
+      "lat": 45.5291512,
+      "lng": -122.8490732
     },
     {
       "id": "lddbd-285",
@@ -465,8 +467,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Jon-Cohen-.jpg",
       "website": "http://www.JonCohenRealty.com",
       "phone": "503-720-9393",
-      "lat": 45.475899999999996,
-      "lng": -122.7524125
+      "lat": 45.4877202,
+      "lng": -122.7434654
     },
     {
       "id": "lddbd-86",
@@ -561,8 +563,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Carry.png",
       "website": "http://carriewelchpdx.com",
       "phone": "503-522-7695",
-      "lat": 45.488924999999995,
-      "lng": -122.7525125
+      "lat": 45.4718517,
+      "lng": -122.7714085
     },
     {
       "id": "lddbd-48",
@@ -573,8 +575,9 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/ParishofStJohntheBaptist_logo.",
       "website": "http://sjb-pdx.org",
       "phone": "503-245-3777",
-      "lat": 45.4761375,
-      "lng": -122.7543625
+      "lat": 45.4789,
+      "lng": -122.773,
+      "geocodeNote": "Oregon Episcopal School campus area; Nominatim had no hit for street string"
     },
     {
       "id": "lddbd-189",
@@ -609,8 +612,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Portland-Specific-Chiropractic.jpg",
       "website": "http://pdxspecificchiropractic.com",
       "phone": "503-334-4545",
-      "lat": 45.474725,
-      "lng": -122.752425
+      "lat": 45.5098976,
+      "lng": -122.7310887
     },
     {
       "id": "lddbd-255",
@@ -621,8 +624,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Principal.jpg",
       "website": "http://principal.com/northwest",
       "phone": "503-484-9305",
-      "lat": 45.474737499999996,
-      "lng": -122.752425
+      "lat": 45.417278,
+      "lng": -122.7285836
     },
     {
       "id": "lddbd-166",
@@ -678,8 +681,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Screenshot-2024-04-20-171552.png",
       "website": "http://www.sbcrecycle.com",
       "phone": "503-334-4146",
-      "lat": 45.473612499999994,
-      "lng": -122.7524375
+      "lat": 45.4910272,
+      "lng": -122.840607
     },
     {
       "id": "lddbd-245",
@@ -738,8 +741,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Talons-Massage.png",
       "website": "https://talonsmassageandbodywork.clinicsense.com/",
       "phone": "971-270-6106",
-      "lat": 45.4981625,
-      "lng": -122.7524375
+      "lat": 45.4930319,
+      "lng": -122.7844056
     },
     {
       "id": "lddbd-236",
@@ -762,8 +765,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/Tom-Maynard-CPA.jpg",
       "website": "https://tcm-cpa.com/",
       "phone": "503-644-5111",
-      "lat": 45.4754875,
-      "lng": -122.752425
+      "lat": 45.4843785,
+      "lng": -122.7553275
     },
     {
       "id": "lddbd-243",
@@ -774,8 +777,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/TITLE-Boxing-red-logo.jpg",
       "website": "http://titleboxingclub.com/portland-beaverton-or/",
       "phone": "503-567-6791",
-      "lat": 45.4865821,
-      "lng": -122.753707
+      "lat": 45.4865693,
+      "lng": -122.7540382
     },
     {
       "id": "lddbd-197",
@@ -798,8 +801,8 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/WA-County-Chamber-of-Commerce.jpg",
       "website": "http://washingtoncountychamberor.com/",
       "phone": "503-536-1000",
-      "lat": 45.474712499999995,
-      "lng": -122.752425
+      "lat": 45.5313851,
+      "lng": -122.9317976
     },
     {
       "id": "lddbd-237",
@@ -868,8 +871,10 @@
       "logoUrl": "https://raleighhillsbusinessassn.org/wp-content/uploads/lddbd-logos/WolexTechnologies_logo.jpg",
       "website": "http://www.wolex.net",
       "phone": "503-662-2190",
-      "lat": 45.488524999999996,
-      "lng": -122.7525125
+      "lat": 45.4930319,
+      "lng": -122.7844056
     }
-  ]
+  ],
+  "geocodedAt": "2026-04-13T09:45:03.561Z",
+  "geocodeValidatedAt": "2026-04-13T09:45:03.561Z"
 }

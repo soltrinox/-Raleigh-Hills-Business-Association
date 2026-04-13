@@ -9,26 +9,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { geocodeAddress } from './geocode-nominatim.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const PATH = join(ROOT, 'data', 'members.json');
-const UA =
-  'RHBA-microsite-import/1.0 (https://raleighhillsbusiness.com; members geocode)';
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function geocode(address) {
-  const q = `${address}, USA`;
-  const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;
-  const res = await fetch(url, {
-    headers: { 'User-Agent': UA, Accept: 'application/json' },
-  });
-  if (!res.ok) return null;
-  const data = await res.json();
-  if (!data?.length) return null;
-  return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
-}
 
 function fallbackLatLng(seed) {
   const base = { lat: 45.486, lng: -122.762 };
@@ -47,8 +32,7 @@ async function main() {
   for (let i = 0; i < members.length; i++) {
     const m = members[i];
     process.stdout.write(`\rGeocode ${i + 1}/${members.length}: ${m.name?.slice(0, 40)}…`);
-    const geo = await geocode(m.address || '');
-    await sleep(1100);
+    const geo = await geocodeAddress(m.address || '');
     if (geo && Number.isFinite(geo.lat) && Number.isFinite(geo.lng)) {
       m.lat = geo.lat;
       m.lng = geo.lng;

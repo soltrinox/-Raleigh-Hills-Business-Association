@@ -86,10 +86,16 @@ export interface Member {
   website?: string;
   phone?: string;
   logoUrl?: string;
+  /** Set when coordinates were placed manually (e.g. Nominatim ambiguity). */
+  geocodeNote?: string;
 }
 
 export interface MembersData {
   generatedAt?: string;
+  source?: string;
+  geocoded?: boolean;
+  geocodedAt?: string;
+  geocodeValidatedAt?: string;
   members: Member[];
 }
 
