@@ -6,14 +6,28 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { Member } from '@/lib/types';
 
-L.Icon.Default.mergeOptions({
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-});
-
 const DEFAULT_CENTER: [number, number] = [45.486, -122.762];
 const DEFAULT_ZOOM = 12;
+
+function pinHtml(color: string) {
+  return `<div style="width:18px;height:18px;border-radius:9999px;background:${color};border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.35)"></div>`;
+}
+
+const greenIcon = L.divIcon({
+  className: 'rhba-marker',
+  html: pinHtml('#16a34a'),
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -8],
+});
+
+const redIcon = L.divIcon({
+  className: 'rhba-marker',
+  html: pinHtml('#dc2626'),
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -8],
+});
 
 function MapViewSync({
   members,
@@ -48,40 +62,57 @@ function MapViewSync({
 
 export type MembersMapProps = {
   members: Member[];
+  selectedId: string | null;
   focusTarget: { lat: number; lng: number } | null;
   onMarkerClick: (id: string) => void;
 };
 
-export function MembersMap({ members, focusTarget, onMarkerClick }: MembersMapProps) {
+export function MembersMap({ members, selectedId, focusTarget, onMarkerClick }: MembersMapProps) {
   return (
-    <MapContainer
-      center={DEFAULT_CENTER}
-      zoom={DEFAULT_ZOOM}
-      className="z-0 h-full min-h-[280px] w-full rounded-lg md:min-h-[420px]"
-      scrollWheelZoom
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <MapViewSync members={members} focusTarget={focusTarget} />
-      {members.map((m) => (
-        <Marker
-          key={m.id}
-          position={[m.lat, m.lng]}
-          eventHandlers={{
-            click: () => onMarkerClick(m.id),
-          }}
-        >
-          <Popup>
-            <div className="min-w-[160px] text-sm">
-              <p className="font-semibold">{m.name}</p>
-              <p className="text-muted-foreground">{m.category}</p>
-              <p className="mt-1 text-xs">{m.address}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <div className="overflow-hidden rounded-xl border border-border bg-muted/30 shadow-sm">
+      <div className="flex items-center justify-between gap-2 border-b border-border bg-card px-3 py-2 text-xs text-muted-foreground">
+        <span className="flex items-center gap-3">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block size-2.5 rounded-full bg-green-600 ring-1 ring-white" aria-hidden />
+            Members
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block size-2.5 rounded-full bg-red-600 ring-1 ring-white" aria-hidden />
+            Selected
+          </span>
+        </span>
+        <span>{members.length} on map</span>
+      </div>
+      <MapContainer
+        center={DEFAULT_CENTER}
+        zoom={DEFAULT_ZOOM}
+        className="z-0 h-full min-h-[300px] w-full md:min-h-[440px]"
+        scrollWheelZoom
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <MapViewSync members={members} focusTarget={focusTarget} />
+        {members.map((m) => (
+          <Marker
+            key={m.id}
+            position={[m.lat, m.lng]}
+            icon={selectedId === m.id ? redIcon : greenIcon}
+            eventHandlers={{
+              click: () => onMarkerClick(m.id),
+            }}
+          >
+            <Popup>
+              <div className="min-w-[180px] text-sm">
+                <p className="font-semibold text-foreground">{m.name}</p>
+                <p className="text-xs text-muted-foreground">{m.category}</p>
+                <p className="mt-1 text-xs leading-snug">{m.address}</p>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 }

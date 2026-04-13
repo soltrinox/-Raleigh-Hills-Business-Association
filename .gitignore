@@ -43,6 +43,9 @@ next-env.d.ts
 # mirrored site (run npm run scrape)
 /cache/
 
+# local HTML snapshots from curl / extract scripts
+.cache-*.html
+
 # Cursor / IDE
 .cursor/
 

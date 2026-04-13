@@ -8,6 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "members:extract": "node scripts/extract-directory-to-members.mjs",
+    "members:extract:fast": "node scripts/extract-directory-to-members.mjs --no-geocode",
+    "members:geocode": "node scripts/geocode-members.mjs",
     "deploy": "npx vercel deploy",
     "deploy:prod": "npx vercel deploy --prod"
   },

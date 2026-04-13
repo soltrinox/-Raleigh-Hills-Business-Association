@@ -52,7 +52,7 @@ Commit updated JSON under `data/` and redeploy (or run `pnpm build` locally).
 
 | File | Used by |
 |------|---------|
-| `data/members.json` | **`/members`** — member directory and Leaflet map (`members[]` with `id`, `name`, `category`, `address`, `lat`, `lng`, optional `phone`, `website`, `description`, `logoUrl`) |
+| `data/members.json` | **`/members`** — member directory and Leaflet map (`members[]` with `id`, `name`, `category`, `address`, `lat`, `lng`, optional `phone`, `website`, `description`, `logoUrl`). **Refresh:** `pnpm members:extract` (scrapes [directory-2](https://raleighhillsbusinessassn.org/directory-2/) + Nominatim, slow) or `pnpm members:extract:fast` then `pnpm members:geocode` to geocode existing JSON only. |
 | `data/events.json` | Home upcoming events, **`/events`** cards, **`/calendar`** — `manual` and `events` arrays (ISO `start`/`end`, optional `recurringRule`) |
 | `data/home-feed.json` | Home page **News & announcements** — `items[]` with `title`, `summary`, optional `href`, `date` (ISO) |
 | `data/site.bundle.json` | CMS-style pages under **`/[...slug]`** |
