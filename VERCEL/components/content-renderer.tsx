@@ -1,3 +1,4 @@
+import type { ReactElement } from "react"
 import type { ContentBlock } from "@/lib/types"
 import Image from "next/image"
 import Link from "next/link"
@@ -114,7 +115,7 @@ function RenderTextWithLinks({ text, links }: { text: string; links?: InlineLink
 
   // Simple rendering - find and replace link text with actual links
   let result = text
-  const elements: (string | JSX.Element)[] = []
+  const elements: (string | ReactElement)[] = []
   let lastIndex = 0
 
   links.forEach((link, i) => {
