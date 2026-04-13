@@ -10,7 +10,16 @@
     "scrape": "tsx scripts/scrape-site.ts",
     "extract": "tsx scripts/extract-content.ts",
     "extract:bundle": "tsx scripts/extract-content-bundle.ts",
-    "content:update": "npm run scrape && npm run extract && npm run extract:bundle"
+    "content:update": "npm run scrape && npm run extract && npm run extract:bundle",
+    "web:install": "npx pnpm@10 -C VERCEL install --frozen-lockfile",
+    "web:dev": "npx pnpm@10 -C VERCEL dev",
+    "web:build": "npx pnpm@10 -C VERCEL build",
+    "web:start": "npx pnpm@10 -C VERCEL start",
+    "web:lint": "npx pnpm@10 -C VERCEL lint",
+    "vercel:link": "npx vercel link --cwd VERCEL --yes",
+    "vercel:pull": "npx vercel pull VERCEL --yes --environment=development",
+    "vercel:deploy": "npx vercel deploy VERCEL",
+    "vercel:deploy:prod": "npx vercel deploy VERCEL --prod"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
