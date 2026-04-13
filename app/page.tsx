@@ -14,16 +14,15 @@ import {
   ShoppingBag,
   Coffee,
   Video,
-  MapPin,
-  Clock
+  MapPin
 } from "lucide-react"
-import { getUpcomingEvents, getFeaturedEvent, getSiteMetadata, getPageById } from "@/lib/data"
+import { format, parseISO, isValid } from "date-fns"
+import { getFeaturedEvent, getSiteMetadata, getHomeFeed } from "@/lib/data"
 
 export default function HomePage() {
   const site = getSiteMetadata()
-  const upcomingEvents = getUpcomingEvents(4)
   const featuredEvent = getFeaturedEvent()
-  const homePage = getPageById('index')
+  const homeFeed = getHomeFeed()
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -81,6 +80,53 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
+            </div>
+          </section>
+        )}
+
+        {homeFeed.length > 0 && (
+          <section className="border-b border-border bg-muted/40 py-14 lg:py-16">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl text-center">
+                <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+                  News &amp; announcements
+                </h2>
+                <p className="mt-3 text-muted-foreground">
+                  Editable via <code className="rounded bg-muted px-1.5 py-0.5 text-sm">data/home-feed.json</code>
+                </p>
+              </div>
+              <ul className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2">
+                {homeFeed.map((item, i) => {
+                  let dateLabel: string | null = null
+                  if (item.date) {
+                    const d = parseISO(item.date)
+                    dateLabel = isValid(d) ? format(d, "MMMM d, yyyy") : null
+                  }
+                  const inner = (
+                    <>
+                      {dateLabel && (
+                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{dateLabel}</p>
+                      )}
+                      <p className="mt-1 font-serif text-lg font-semibold text-foreground">{item.title}</p>
+                      <p className="mt-2 text-sm text-muted-foreground">{item.summary}</p>
+                    </>
+                  )
+                  return (
+                    <li key={`${item.title}-${i}`}>
+                      {item.href ? (
+                        <Link
+                          href={item.href}
+                          className="block rounded-xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+                        >
+                          {inner}
+                        </Link>
+                      ) : (
+                        <div className="rounded-xl border border-border bg-card p-6 shadow-sm">{inner}</div>
+                      )}
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           </section>
         )}

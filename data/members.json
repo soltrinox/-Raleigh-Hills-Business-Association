@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-04-12T00:00:00.000Z",
+  "members": [
+    {
+      "id": "sample-westside-wines",
+      "name": "Westside Wines (sample)",
+      "category": "Retail",
+      "description": "Wine shop and tasting room — replace with real member data.",
+      "address": "8122 SW Beaverton-Hillsdale Hwy, Portland, OR 97225",
+      "lat": 45.4862,
+      "lng": -122.7528,
+      "phone": "503-555-0100",
+      "website": "https://example.com"
+    },
+    {
+      "id": "sample-eastern-pearl",
+      "name": "Eastern Pearl Restaurant (sample)",
+      "category": "Food & Dining",
+      "description": "No-host lunch meetup location — sample pin.",
+      "address": "8651 SW Canyon Dr, Portland, OR 97225",
+      "lat": 45.4974,
+      "lng": -122.7639,
+      "phone": "503-555-0200",
+      "website": "https://example.com"
+    },
+    {
+      "id": "sample-rhba-office",
+      "name": "RHBA mailing address (sample)",
+      "category": "Association",
+      "description": "Association office / mailing — sample entry.",
+      "address": "10445 SW Canyon Rd, Suite 116, Beaverton, OR 97005",
+      "lat": 45.4512,
+      "lng": -122.8065,
+      "phone": "503-452-0071",
+      "website": "https://raleighhillsbusinessassn.org"
+    }
+  ]
+}

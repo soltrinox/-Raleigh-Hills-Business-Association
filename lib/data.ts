@@ -1,7 +1,17 @@
-import type { SiteBundle, EventsData, NavData, NavConfig, Page, CalendarEvent } from './types';
+import type {
+  SiteBundle,
+  EventsData,
+  NavData,
+  NavConfig,
+  Page,
+  CalendarEvent,
+  HomeFeedData,
+  HomeFeedItem,
+} from './types';
 import siteBundleData from '@/data/site.bundle.json';
 import eventsData from '@/data/events.json';
 import navData from '@/data/nav.json';
+import homeFeedData from '@/data/home-feed.json';
 
 // Type assertions for imported JSON
 const siteBundle = siteBundleData as SiteBundle;
@@ -151,12 +161,20 @@ export function getPageForSlug(slug: string[]): Page | undefined {
   return getPageByPath(path);
 }
 
+/** Single-segment paths handled by `app/<segment>/page.tsx` (not the catch-all). */
+const RESERVED_FIRST_CLASS_SLUGS = new Set(['members', 'events']);
+
+function isReservedSlugPath(slug: string[]): boolean {
+  return slug.length === 1 && RESERVED_FIRST_CLASS_SLUGS.has(slug[0]);
+}
+
 /** Params for `app/[...slug]` static generation: every bundle path + every alias. */
 export function getAllStaticSlugParams(): { slug: string[] }[] {
   const seen = new Set<string>();
   const out: { slug: string[] }[] = [];
 
   const add = (slug: string[]) => {
+    if (isReservedSlugPath(slug)) return;
     const k = JSON.stringify(slug);
     if (seen.has(k)) return;
     seen.add(k);
@@ -233,6 +251,15 @@ export function getFeaturedEvent(): CalendarEvent | undefined {
 // Get all navigation links from raw nav data
 export function getAllNavLinks() {
   return nav.links;
+}
+
+export function getHomeFeed(): HomeFeedItem[] {
+  try {
+    const data = homeFeedData as HomeFeedData;
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
 }
 
 // Site metadata

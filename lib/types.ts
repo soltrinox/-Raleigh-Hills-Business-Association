@@ -73,3 +73,33 @@ export interface NavConfig {
     }[];
   };
 }
+
+/** Member directory entry — see `data/members.json`. */
+export interface Member {
+  id: string;
+  name: string;
+  category: string;
+  description?: string;
+  address: string;
+  lat: number;
+  lng: number;
+  website?: string;
+  phone?: string;
+  logoUrl?: string;
+}
+
+export interface MembersData {
+  generatedAt?: string;
+  members: Member[];
+}
+
+export interface HomeFeedItem {
+  title: string;
+  summary: string;
+  href?: string;
+  date?: string;
+}
+
+export interface HomeFeedData {
+  items: HomeFeedItem[];
+}

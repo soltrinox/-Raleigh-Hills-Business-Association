@@ -1,6 +1,6 @@
 # Raleigh Hills Business Association — Next.js site
 
-Production **Next.js 16** (App Router) site with **Tailwind CSS v4**, **shadcn/ui**, and static content from **`data/`** (`site.bundle.json`, `events.json`, `nav.json`).
+Production **Next.js 16** (App Router) site with **Tailwind CSS v4**, **shadcn/ui**, and static content from **`data/`** (`site.bundle.json`, `events.json`, `nav.json`, `members.json`, `home-feed.json`).
 
 ## Prerequisites
 
@@ -40,11 +40,25 @@ pnpm deploy:prod   # production
 
 | Path | Role |
 |------|------|
-| `app/` | Routes: `/`, `/about`, `/calendar`, `[...slug]`, … |
+| `app/` | Routes: `/`, `/about`, `/calendar`, `/events`, `/members`, `[...slug]`, … |
 | `components/` | UI + `page-template`, navigation, shadcn primitives |
-| `data/` | `site.bundle.json`, `events.json`, `nav.json`, … |
+| `data/` | `site.bundle.json`, `events.json`, `nav.json`, `members.json`, `home-feed.json`, … |
 | `lib/` | Data helpers, types, calendar utilities |
 | `archive/legacy-daisyui-site/` | Archived DaisyUI mirror + scrape/extract tooling (not deployed) |
+
+## Updating content without code changes
+
+Commit updated JSON under `data/` and redeploy (or run `pnpm build` locally).
+
+| File | Used by |
+|------|---------|
+| `data/members.json` | **`/members`** — member directory and Leaflet map (`members[]` with `id`, `name`, `category`, `address`, `lat`, `lng`, optional `phone`, `website`, `description`, `logoUrl`) |
+| `data/events.json` | Home upcoming events, **`/events`** cards, **`/calendar`** — `manual` and `events` arrays (ISO `start`/`end`, optional `recurringRule`) |
+| `data/home-feed.json` | Home page **News & announcements** — `items[]` with `title`, `summary`, optional `href`, `date` (ISO) |
+| `data/site.bundle.json` | CMS-style pages under **`/[...slug]`** |
+| `data/nav.json` | Raw nav links where referenced |
+
+Dedicated routes **`/members`** and **`/events`** override bundle pages with the same single-segment path so the interactive UI is used instead of scraped HTML.
 
 ## Legacy content pipeline
 

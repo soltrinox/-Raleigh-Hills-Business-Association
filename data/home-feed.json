@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "title": "14th Annual Recycle/Shred Event",
+      "summary": "Saturday, April 18, 2026 — 9am to noon. Secure shredding, recycling, and community collections. Edit this file to update home-page news without code changes.",
+      "href": "/events/shred-event",
+      "date": "2026-04-18"
+    },
+    {
+      "title": "Member Spotlight Zoom",
+      "summary": "Every 2nd Wednesday, 8–9am. Visitors welcome — showcase of RHBA members and community updates.",
+      "href": "/member-spotlight",
+      "date": "2026-04-12"
+    }
+  ]
+}

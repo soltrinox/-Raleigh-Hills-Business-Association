@@ -124,3 +124,51 @@ export function expandRecurringEvents(
 
   return out;
 }
+
+export type EventCardDTO = {
+  id: string;
+  title: string;
+  start: string;
+  end?: string;
+  sourcePageUrl?: string;
+  recurringRule?: string;
+};
+
+function cleanListingTitle(title: string): string {
+  const t = title.replace(/^\|\s*/, '').trim();
+  if (!t || t === 'Raleigh Hills Business Association' || t.includes('| Raleigh Hills Business Association')) {
+    return 'RHBA event';
+  }
+  return t;
+}
+
+/**
+ * Expanded recurring instances, upcoming-only, deduped by start + title, sorted by start.
+ */
+export function getExpandedUpcomingEventCards(horizonMonths = 8): EventCardDTO[] {
+  const raw = loadRawEvents();
+  const expanded = expandRecurringEvents(raw, new Date(), horizonMonths);
+  const now = new Date();
+  const seen = new Set<string>();
+  const out: EventCardDTO[] = [];
+
+  for (const e of expanded) {
+    if (e.start < now) continue;
+    const title = cleanListingTitle(e.title);
+    const startIso = e.start.toISOString();
+    const key = `${startIso}|${title.toLowerCase().replace(/\s+/g, ' ').trim()}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      id: e.id,
+      title,
+      start: startIso,
+      end: e.end?.toISOString(),
+      sourcePageUrl: e.resource?.sourcePageUrl,
+      recurringRule: e.resource?.recurringRule,
+    });
+  }
+
+  out.sort((a, b) => a.start.localeCompare(b.start));
+  return out;
+}
