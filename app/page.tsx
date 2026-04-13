@@ -18,11 +18,14 @@ import {
 } from "lucide-react"
 import { format, parseISO, isValid } from "date-fns"
 import { getFeaturedEvent, getSiteMetadata, getHomeFeed } from "@/lib/data"
+import { loadMembers } from "@/lib/members"
+import { FeaturedMembersCarousel } from "@/components/home/FeaturedMembersCarousel"
 
 export default function HomePage() {
   const site = getSiteMetadata()
   const featuredEvent = getFeaturedEvent()
   const homeFeed = getHomeFeed()
+  const members = loadMembers()
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -398,6 +401,8 @@ export default function HomePage() {
             </p>
           </div>
         </section>
+
+        <FeaturedMembersCarousel members={members} />
       </main>
 
       <Footer />
