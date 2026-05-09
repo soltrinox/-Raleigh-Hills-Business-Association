@@ -77,18 +77,11 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-background/20 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 pt-8 border-t border-background/20">
           <p className="text-sm text-background/60">
-            &copy; {new Date().getFullYear()} {site.name}. All rights reserved. A registered 501(c)(6) non-profit organization.
+            &copy; {new Date().getFullYear()} {site.name}. All rights reserved. A registered 501(c)(6)
+            non-profit organization.
           </p>
-          <div className="flex gap-6 text-sm text-background/60">
-            <Link href="/privacy" className="hover:text-background transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-background transition-colors">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

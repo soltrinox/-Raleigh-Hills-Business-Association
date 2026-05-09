@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { OrganizationJsonLd } from '@/components/OrganizationJsonLd'
+import { Toaster } from 'sonner'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <OrganizationJsonLd />
+        <Toaster richColors position="top-center" />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

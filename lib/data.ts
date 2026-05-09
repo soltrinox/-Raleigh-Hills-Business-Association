@@ -99,7 +99,6 @@ export const navConfig: NavConfig = {
           { label: 'Member Directory', href: '/members' },
           { label: 'Member Benefits', href: '/member-benefits' },
           { label: 'Join RHBA', href: '/join' },
-          { label: 'Member Login', href: '/login' },
         ],
       },
       {
@@ -143,11 +142,10 @@ export function getPageBySlug(slug: string): Page | undefined {
  * Keys are slug paths joined with "/" (e.g. events/shred-event).
  */
 export const ROUTE_TO_BUNDLE_SEGMENTS: Record<string, string[]> = {
-  contact: ['contact-us'],
-  join: ['rhba-application'],
   'events/shred-event': ['recycle-and-shred-event-happening-april-18-2026'],
   'events/school-supplies': ['back-pack-program-2021'],
   'events/shop-with-a-cop': ['shop-with-a-cop'],
+  'events/coffee-meetup': ['coffee-meetup'],
   'events/lunch-meetup': ['no-host-lunch-meetup'],
   'member-spotlight': ['member-spotlights-via-zoom'],
   'bulletin-board': ['member-bulletin-board'],

@@ -2,6 +2,19 @@
 
 Production **Next.js 16** (App Router) site with **Tailwind CSS v4**, **shadcn/ui**, and static content from **`data/`** (`site.bundle.json`, `events.json`, `nav.json`, `members.json`, `home-feed.json`).
 
+## Forms & email (`/contact`, `/join`)
+
+Public forms submit to **`POST /api/contact`** and **`POST /api/join`**. Messages are emailed to **`CONTACT_TO_EMAIL`** via [Resend](https://resend.com). There is **no database** in this repo; the admin inbox is the record.
+
+**API key**
+
+- Prefer **`RESEND_API_KEY`** in `.env.local` / Vercel—it overrides embedded fragments when set.
+- If **`RESEND_API_KEY`** is unset, the mailer merges two **server-only** fragments in **`lib/server/resend-key-part-a.ts`** and **`lib/server/resend-key-part-b.ts`**. Splitting strings does **not** keep them secret from anyone with repo or git history; treat them as fragile and rotate the key after any leak.
+
+Until your Resend **[domain](https://resend.com/domains)** is verified, **`CONTACT_FROM_EMAIL`** may need **`onboarding@resend.dev`** and **`CONTACT_TO_EMAIL`** must often match the inbox allowed for your account’s testing tier (otherwise Resend returns a 4xx surfaced as **502** from the API routes).
+
+Later, you can add persistence (Blob, Postgres, sheets) inside the route handlers **after** validation and **before** `sendAdminEmail`.
+
 ## Prerequisites
 
 - Node 20+
@@ -28,6 +41,7 @@ pnpm start
 1. Import this repository; **Root Directory** must be **`.`** (repository root), or empty. If you previously set it to **`VERCEL`**, clear that so Vercel builds from the repo root.
 2. Framework: **Next.js**. Install/build use **`pnpm`** per `vercel.json`.
 3. Set **`NEXT_PUBLIC_SITE_URL`** for production URLs where needed (see `env.example`).
+4. For **`/contact`** and **`/join`**, add Resend env vars from **`env.example`** (`RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`).
 
 CLI from repo root:
 
@@ -40,7 +54,7 @@ pnpm deploy:prod   # production
 
 | Path | Role |
 |------|------|
-| `app/` | Routes: `/`, `/about`, `/calendar`, `/events`, `/gallery`, `/events/[slug]`, `/members`, `/member-benefits`, `[...slug]`, … |
+| `app/` | Routes: `/`, `/about`, `/calendar`, `/contact`, `/join`, `/events`, `/gallery`, `/events/[slug]`, `/members`, `/member-benefits`, `[...slug]`, … |
 | `components/` | UI + `page-template`, navigation, shadcn primitives, `social/` (home + footer “Follow us” badges; URLs from `getSiteMetadata().social` in `lib/data.ts`) |
 | `data/` | `site.bundle.json`, `events.json`, `nav.json`, `members.json`, `home-feed.json`, … |
 | `lib/` | Data helpers, types, calendar utilities |
@@ -60,7 +74,7 @@ Commit updated JSON under `data/` and redeploy (or run `pnpm build` locally).
 | `data/photos.json` | Site photo manifest: hero rotation, event carousel, themed section banners, **`/gallery`**. Source files live in **`public/rhba-images/`**. Regenerate dimensions and defaults with **`pnpm photos:manifest`** (merges with manual `category`, `alt`, `tags`, etc.). |
 | `data/nav.json` | Raw nav links where referenced |
 
-Dedicated routes **`/members`**, **`/events`**, **`/gallery`**, **`/member-benefits`**, and **`/events/[slug]`** override bundle pages where paths overlap so the interactive UI is used instead of scraped HTML.
+Dedicated routes **`/contact`**, **`/join`**, **`/members`**, **`/events`**, **`/gallery`**, **`/member-benefits`**, and **`/events/[slug]`** override bundle pages where paths overlap so the interactive UI is used instead of scraped HTML.
 
 ## Legacy content pipeline
 
