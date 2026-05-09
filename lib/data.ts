@@ -53,6 +53,7 @@ export const navConfig: NavConfig = {
       label: 'Members',
       children: [
         { label: 'Member Directory', href: '/members' },
+        { label: 'Alphabetical Directory', href: '/members/directory' },
         { label: 'Member Benefits', href: '/member-benefits' },
         { label: 'Member Spotlight', href: '/member-spotlight' },
         { label: 'Member Bulletin Board', href: '/bulletin-board' },

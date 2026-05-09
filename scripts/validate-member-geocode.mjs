@@ -119,6 +119,34 @@ async function main() {
     }
   }
 
+  // Bounding-box check: Raleigh Hills area
+  const BB = { latMin: 45.40, latMax: 45.60, lngMin: -123.00, lngMax: -122.60 };
+  const outOfBounds = members.filter(
+    (m) =>
+      Number.isFinite(m.lat) &&
+      Number.isFinite(m.lng) &&
+      (m.lat < BB.latMin || m.lat > BB.latMax || m.lng < BB.lngMin || m.lng > BB.lngMax),
+  );
+  const withNote = members.filter((m) => m.geocodeNote);
+
+  if (outOfBounds.length > 0) {
+    console.log(`\nOut of bounding box (${BB.latMin}–${BB.latMax}, ${BB.lngMin}–${BB.lngMax})`);
+    console.log('---');
+    for (const m of outOfBounds) {
+      console.log(`  ${m.name} (${m.id})  lat=${m.lat} lng=${m.lng}  addr=${m.address}`);
+    }
+  } else {
+    console.log('\nAll members within Raleigh Hills bounding box.');
+  }
+
+  if (withNote.length > 0) {
+    console.log(`\nMembers with geocodeNote (${withNote.length})`);
+    console.log('---');
+    for (const m of withNote) {
+      console.log(`  ${m.name} (${m.id})  note="${m.geocodeNote}"`);
+    }
+  }
+
   if (apply) {
     raw.geocoded = true;
     raw.geocodedAt = new Date().toISOString();

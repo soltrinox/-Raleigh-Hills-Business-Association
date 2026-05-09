@@ -7,8 +7,6 @@ function isValidMember(row: unknown): row is Member {
   return (
     typeof m.id === 'string' &&
     typeof m.name === 'string' &&
-    typeof m.category === 'string' &&
-    typeof m.address === 'string' &&
     typeof m.lat === 'number' &&
     typeof m.lng === 'number' &&
     Number.isFinite(m.lat) &&
@@ -16,11 +14,24 @@ function isValidMember(row: unknown): row is Member {
   );
 }
 
+function normalizeMember(raw: Record<string, unknown>): Record<string, unknown> {
+  if (!raw.category || typeof raw.category !== 'string') {
+    raw.category = 'Business';
+  }
+  if (!raw.address || typeof raw.address !== 'string') {
+    raw.address = '';
+  }
+  return raw;
+}
+
 export function loadMembers(): Member[] {
   try {
     const data = membersJson as unknown as MembersData;
     const raw = Array.isArray(data.members) ? data.members : [];
-    return raw.filter(isValidMember);
+    const normalized = raw.map((r) =>
+      normalizeMember(r as unknown as Record<string, unknown>),
+    );
+    return (normalized as unknown[]).filter(isValidMember);
   } catch {
     return [];
   }
