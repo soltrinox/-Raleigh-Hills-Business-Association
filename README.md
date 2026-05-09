@@ -40,7 +40,7 @@ pnpm deploy:prod   # production
 
 | Path | Role |
 |------|------|
-| `app/` | Routes: `/`, `/about`, `/calendar`, `/events`, `/members`, `[...slug]`, … |
+| `app/` | Routes: `/`, `/about`, `/calendar`, `/events`, `/events/[slug]`, `/members`, `[...slug]`, … |
 | `components/` | UI + `page-template`, navigation, shadcn primitives |
 | `data/` | `site.bundle.json`, `events.json`, `nav.json`, `members.json`, `home-feed.json`, … |
 | `lib/` | Data helpers, types, calendar utilities |
@@ -52,13 +52,14 @@ Commit updated JSON under `data/` and redeploy (or run `pnpm build` locally).
 
 | File | Used by |
 |------|---------|
-| `data/members.json` | **`/members`** — member directory and Leaflet map (`members[]` with `id`, `name`, `category`, `address`, `lat`, `lng`, optional `phone`, `website`, `description`, `logoUrl`, optional `geocodeNote`). **Refresh:** `pnpm members:extract` (scrapes [directory-2](https://raleighhillsbusinessassn.org/directory-2/) + Nominatim, slow) or `pnpm members:extract:fast` then `pnpm members:geocode` to geocode existing JSON only. **Validate pins vs addresses:** `pnpm members:validate-geocode` (dry run); add `--apply --min-m=0` to rewrite coordinates from Nominatim (throttled ~1 req/s). Geocoding uses a Portland-metro viewbox for Oregon addresses, quadrant expansion (SW→Southwest), and skips PO Boxes / “see website” placeholders (those rows keep existing pins). If a listing’s **address is outside Oregon** (e.g. a California HQ), the pin correctly follows that address. |
-| `data/events.json` | Home upcoming events, **`/events`** cards, **`/calendar`** — `manual` and `events` arrays (ISO `start`/`end`, optional `recurringRule`) |
+| `data/members.json` | **`/members`** — member directory and Leaflet map (`members[]` with `id`, `name`, `category`, `address`, `lat`, `lng`, optional `phone`, `website`, `description`, `logoUrl`, optional `geocodeNote`). **Refresh:** `pnpm members:extract` (scrapes [directory-2](https://raleighhillsbusinessassn.org/directory-2/) + Nominatim, slow) or `pnpm members:extract:fast` then `pnpm members:geocode` to geocode the default bundle. **`pnpm members:geocode:all`** geocodes both **`members.json`** and **`members2.json`** (or pass `--file=data/….json` to `scripts/geocode-members.mjs`). **Validate pins vs addresses:** `pnpm members:validate-geocode` (dry run, exits non-zero only if bad pins > 0 unless you pass **`--strict`**, which also fails when any row gets no geocode); add `--apply --min-m=0` to rewrite coordinates from Nominatim (throttled ~1 req/s). Geocoding uses a Portland-metro viewbox for Oregon addresses, quadrant expansion (SW→Southwest), and skips PO Boxes / “see website” placeholders (those rows get fallback pins). If a listing’s **address is outside Oregon** (e.g. a California HQ), the pin correctly follows that address. |
+| `data/members2.json` | Optional RHBA workbook export: regenerate from **`data/RHBA membership listing April 2026.xlsx`** with **`pnpm data:rhba`** (fields missing in the spreadsheet are omitted, not placeholders). Swap your data loader if you want `/members` to use this instead of `members.json`. |
+| `data/events.json` | Home mini-calendar & upcoming list, **`/events`** cards, **`/calendar`** month grid, **`/events/[slug]`** detail pages — `manual` (curated Meetup-style entries with `slug`, host, links, etc.) and `events` (scraped fallback). ISO `start`/`end`, optional `recurringRule`. Run **`pnpm events:validate`** after edits. |
 | `data/home-feed.json` | Home page **News & announcements** — `items[]` with `title`, `summary`, optional `href`, `date` (ISO) |
 | `data/site.bundle.json` | CMS-style pages under **`/[...slug]`** |
 | `data/nav.json` | Raw nav links where referenced |
 
-Dedicated routes **`/members`** and **`/events`** override bundle pages with the same single-segment path so the interactive UI is used instead of scraped HTML.
+Dedicated routes **`/members`**, **`/events`**, and **`/events/[slug]`** override bundle pages where paths overlap so the interactive UI is used instead of scraped HTML.
 
 ## Legacy content pipeline
 

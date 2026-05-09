@@ -16,6 +16,12 @@ import homeFeedData from '@/data/home-feed.json';
 // Type assertions for imported JSON
 const siteBundle = siteBundleData as SiteBundle;
 const events = eventsData as EventsData;
+
+/** Org-wide social URLs (single source of truth for footer, JSON-LD, event fallbacks). */
+export const ORG_SOCIAL = {
+  instagram: 'https://www.instagram.com/raleighhillsbusinessassn?igsh=dXIwazJ1ZnYzZ2sy',
+  facebook: 'https://www.facebook.com/RHBA1',
+} as const;
 const nav = navData as NavData;
 
 // Navigation configuration - organized hierarchy
@@ -35,7 +41,7 @@ export const navConfig: NavConfig = {
       label: 'Events',
       children: [
         { label: 'All Events', href: '/events' },
-        { label: 'Calendar', href: '/calendar' },
+        { label: 'Monthly calendar', href: '/calendar' },
         { label: 'Recycle/Shred Event', href: '/events/shred-event' },
         { label: 'School Supply Drive', href: '/events/school-supplies' },
         { label: 'Shop With A Cop', href: '/events/shop-with-a-cop' },
@@ -79,7 +85,7 @@ export const navConfig: NavConfig = {
         title: 'Events',
         links: [
           { label: 'All Events', href: '/events' },
-          { label: 'Calendar', href: '/calendar' },
+          { label: 'Monthly calendar', href: '/calendar' },
           { label: 'Recycle/Shred Event', href: '/events/shred-event' },
           { label: 'School Supply Drive', href: '/events/school-supplies' },
         ],
@@ -139,7 +145,6 @@ export const ROUTE_TO_BUNDLE_SEGMENTS: Record<string, string[]> = {
   'events/shred-event': ['recycle-and-shred-event-happening-april-18-2026'],
   'events/school-supplies': ['back-pack-program-2021'],
   'events/shop-with-a-cop': ['shop-with-a-cop'],
-  'events/coffee-meetup': ['coffee-meetup'],
   'events/lunch-meetup': ['no-host-lunch-meetup'],
   'member-spotlight': ['member-spotlights-via-zoom'],
   'bulletin-board': ['member-bulletin-board'],
@@ -193,7 +198,7 @@ export function getAllStaticSlugParams(): { slug: string[] }[] {
 // Get all events
 export function getAllEvents(): CalendarEvent[] {
   // Combine manual and auto-generated events
-  const allEvents = [...events.manual, ...events.events];
+  const allEvents = [...(events.manual ?? []), ...(events.events ?? [])];
   
   // Filter and clean up events
   return allEvents
@@ -272,6 +277,7 @@ export function getSiteMetadata() {
     address: '10445 SW Canyon Rd, Suite 116, Beaverton OR 97005',
     phone: '503-452-0071',
     zoomLink: 'https://us02web.zoom.us/j/87045373262?pwd=Y0w3VkpqTEpBeXkxd0x1STBDMnJZdz09',
+    social: { ...ORG_SOCIAL },
     membershipFee: {
       new: 100,
       renewal: 75,

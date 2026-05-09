@@ -20,12 +20,35 @@ import { format, parseISO, isValid } from "date-fns"
 import { getFeaturedEvent, getSiteMetadata, getHomeFeed } from "@/lib/data"
 import { loadMembers } from "@/lib/members"
 import { FeaturedMembersCarousel } from "@/components/home/FeaturedMembersCarousel"
+import { CalendarMini } from "@/components/calendar/CalendarMini"
+import { EventCard } from "@/components/events/EventCard"
+import {
+  adjacentYm,
+  buildCalendarGrid,
+  ymFromSearchParam,
+} from "@/lib/calendar-grid"
+import { getEventsForMonth, getRecentUpcoming } from "@/lib/events"
 
-export default function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ calYm?: string }>
+}) {
   const site = getSiteMetadata()
   const featuredEvent = getFeaturedEvent()
   const homeFeed = getHomeFeed()
   const members = loadMembers()
+
+  const sp = await searchParams
+  const today = new Date()
+  const { year, monthIndex, ymParam } = ymFromSearchParam(sp.calYm, today)
+  const instances = getEventsForMonth(year, monthIndex)
+  const cells = buildCalendarGrid(year, monthIndex, instances)
+  const monthLabel = format(new Date(year, monthIndex, 1), "MMMM yyyy")
+  const prevYm = adjacentYm(year, monthIndex, -1)
+  const nextYm = adjacentYm(year, monthIndex, 1)
+  const todayYm = format(today, "yyyy-MM")
+  const recentEvents = getRecentUpcoming(8).slice(0, 3)
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -43,7 +66,7 @@ export default function HomePage() {
               <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
                 {site.description}
               </p>
-              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
                 <Button size="lg" variant="secondary" asChild>
                   <Link href="/join">
                     Join Our Association
@@ -53,6 +76,12 @@ export default function HomePage() {
                 <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
                   <Link href="/members">
                     Member Directory
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                  <Link href="/calendar">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    View calendar
                   </Link>
                 </Button>
               </div>
@@ -77,7 +106,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <Button variant="outline" size="sm" asChild>
-                  <Link href="/events/shred-event">
+                  <Link href="/events/recycle-shred-2026">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -86,6 +115,55 @@ export default function HomePage() {
             </div>
           </section>
         )}
+
+        <section className="border-b border-border bg-background py-14 lg:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+                Recent &amp; upcoming events
+              </h2>
+              <p className="mt-3 text-muted-foreground">
+                From{" "}
+                <code className="rounded bg-muted px-1.5 py-0.5 text-sm">data/events.json</code>{" "}
+                — tap a highlighted day to jump to an event card.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+              <div className="min-w-0 flex-1 space-y-6">
+                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {recentEvents.map((e) => (
+                    <EventCard
+                      key={e.id}
+                      event={e}
+                      id={e.slug ? `evt-${e.slug}` : undefined}
+                    />
+                  ))}
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                  <Button asChild>
+                    <Link href="/calendar">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      View full calendar
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link href="/events">All events</Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="flex shrink-0 justify-center lg:justify-end lg:pt-2">
+                <CalendarMini
+                  key={ymParam}
+                  monthLabel={monthLabel}
+                  prevHref={`/?calYm=${prevYm}`}
+                  nextHref={`/?calYm=${nextYm}`}
+                  todayHref={`/?calYm=${todayYm}`}
+                  cells={cells}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {homeFeed.length > 0 && (
           <section className="border-b border-border bg-muted/40 py-14 lg:py-16">

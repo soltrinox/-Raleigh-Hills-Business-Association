@@ -18,7 +18,7 @@ function isValidMember(row: unknown): row is Member {
 
 export function loadMembers(): Member[] {
   try {
-    const data = membersJson as MembersData;
+    const data = membersJson as unknown as MembersData;
     const raw = Array.isArray(data.members) ? data.members : [];
     return raw.filter(isValidMember);
   } catch {

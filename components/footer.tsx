@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, Video } from "lucide-react"
+import { Mail, MapPin, Phone, Video, Instagram, Facebook } from "lucide-react"
 import { navConfig, getSiteMetadata } from "@/lib/data"
 
 export function Footer() {
@@ -43,6 +43,26 @@ export function Footer() {
                 <Video className="h-5 w-5 shrink-0" />
                 <a href={site.zoomLink} target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">
                   Join on Zoom
+                </a>
+              </div>
+              <div className="flex items-center gap-3 pt-2">
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border border-background/30 p-2 hover:bg-background/10 transition-colors"
+                  aria-label="RHBA on Instagram"
+                >
+                  <Instagram className="h-5 w-5" aria-hidden />
+                </a>
+                <a
+                  href={site.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border border-background/30 p-2 hover:bg-background/10 transition-colors"
+                  aria-label="RHBA on Facebook"
+                >
+                  <Facebook className="h-5 w-5" aria-hidden />
                 </a>
               </div>
             </div>

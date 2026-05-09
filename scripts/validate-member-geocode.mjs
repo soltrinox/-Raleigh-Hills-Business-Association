@@ -131,7 +131,11 @@ async function main() {
     console.log(
       '\nDry run only. Re-run with --apply to write updates for deltas ≥ min-m (use --min-m=0 to sync all successful geocodes).',
     );
-    if (bad + noResult > 0) process.exitCode = 1;
+    // Fail only when stored pins clearly disagree with a fresh geocode (>800m / invalid stored).
+    // `no_result` is reported above but often means Nominatim miss or placeholder addresses;
+    // use --strict to also exit 1 when any row had no Nominatim result.
+    const strict = args.includes('--strict');
+    if (bad > 0 || (strict && noResult > 0)) process.exitCode = 1;
   }
 }
 

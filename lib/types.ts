@@ -31,6 +31,51 @@ export interface SiteBundle {
   pages: Page[];
 }
 
+/** Optional nested shapes for Meetup-style event detail pages (see `data/events.json`). */
+export type EventSocialPlatform = 'facebook' | 'instagram' | 'linkedin' | 'x' | 'youtube' | 'zoom';
+
+export interface EventLocation {
+  name?: string;
+  address?: string;
+  lat?: number;
+  lng?: number;
+  mapUrl?: string;
+  online?: boolean;
+  joinUrl?: string;
+}
+
+export interface EventHost {
+  name: string;
+  role?: string;
+  organization?: string;
+  /** Cross-link to `/members` when present */
+  memberId?: string;
+  email?: string;
+  phone?: string;
+  avatarUrl?: string;
+}
+
+export interface EventLinks {
+  primaryCta?: { label: string; href: string };
+  website?: string;
+  register?: string;
+  tickets?: string;
+  /** Override default `.ics` URL if needed */
+  ics?: string;
+  social?: Partial<Record<EventSocialPlatform, string | null>>;
+  attachments?: { label: string; href: string }[];
+}
+
+export interface EventContact {
+  name: string;
+  role?: string;
+  email?: string;
+  phone?: string;
+}
+
+export type EventStatus = 'scheduled' | 'cancelled' | 'rescheduled' | 'sold_out';
+export type EventVisibility = 'public' | 'members';
+
 export interface CalendarEvent {
   id: string;
   title: string;
@@ -40,12 +85,26 @@ export interface CalendarEvent {
   sourcePageUrl?: string;
   confidence?: 'high' | 'medium' | 'low';
   recurringRule?: string;
+  /** URL segment for `/events/[slug]`; recurring instances use `${slug}-${yyyy-MM-dd}` */
+  slug?: string;
+  summary?: string;
+  timezone?: string;
+  allDay?: boolean;
+  category?: string;
+  tags?: string[];
+  coverImage?: string;
+  location?: EventLocation;
+  host?: EventHost;
+  links?: EventLinks;
+  contacts?: EventContact[];
+  status?: EventStatus;
+  visibility?: EventVisibility;
 }
 
 export interface EventsData {
-  manual: CalendarEvent[];
-  generatedAt: string;
-  events: CalendarEvent[];
+  manual?: CalendarEvent[];
+  generatedAt?: string;
+  events?: CalendarEvent[];
 }
 
 export interface NavLink {
