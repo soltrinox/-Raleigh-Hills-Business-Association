@@ -445,6 +445,36 @@ export function getRecentUpcoming(n: number): EventCardDTO[] {
   return getExpandedUpcomingEventCards(8).slice(0, n);
 }
 
+/**
+ * Strict next upcoming event for the homepage accent banner: first chronological
+ * future instance from expanded events.json, or the next Wednesday recurring meeting.
+ */
+export function getNextUpcomingBannerEvent(): EventCardDTO | null {
+  const upcoming = getExpandedUpcomingEventCards(8);
+  if (upcoming.length > 0) return upcoming[0];
+
+  const now = new Date();
+  const raw = loadRawEvents().filter((e) =>
+    e.recurringRule?.toLowerCase().includes("wednesday")
+  );
+  const expanded = expandRecurringEvents(raw, now, 6)
+    .filter((i) => i.start >= now)
+    .sort((a, b) => a.start.getTime() - b.start.getTime());
+  const pick = expanded[0];
+  if (!pick) return null;
+
+  const stored = raw.find((e) => e.id === pick.resource?.storedEventId);
+  const slug =
+    stored != null ? instanceSlug(stored, pick.start) : calendarInstanceToPublicSlug(pick);
+
+  return {
+    id: pick.id,
+    title: cleanListingTitle(pick.title),
+    start: pick.start.toISOString(),
+    slug: slug ?? null,
+  };
+}
+
 /** Slugs for `generateStaticParams` — curated manual entries with `slug`. */
 export function getAllDetailSlugs(horizonMonths = 14): string[] {
   const raw = loadRawEvents();

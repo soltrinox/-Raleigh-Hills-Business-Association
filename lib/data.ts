@@ -42,6 +42,7 @@ export const navConfig: NavConfig = {
       children: [
         { label: 'All Events', href: '/events' },
         { label: 'Monthly calendar', href: '/calendar' },
+        { label: 'Photo gallery', href: '/gallery' },
         { label: 'Recycle/Shred Event', href: '/events/shred-event' },
         { label: 'School Supply Drive', href: '/events/school-supplies' },
         { label: 'Shop With A Cop', href: '/events/shop-with-a-cop' },
@@ -87,6 +88,7 @@ export const navConfig: NavConfig = {
         links: [
           { label: 'All Events', href: '/events' },
           { label: 'Monthly calendar', href: '/calendar' },
+          { label: 'Photo gallery', href: '/gallery' },
           { label: 'Recycle/Shred Event', href: '/events/shred-event' },
           { label: 'School Supply Drive', href: '/events/school-supplies' },
         ],
@@ -168,7 +170,12 @@ export function getPageForSlug(slug: string[]): Page | undefined {
 }
 
 /** Single-segment paths handled by `app/<segment>/page.tsx` (not the catch-all). */
-const RESERVED_FIRST_CLASS_SLUGS = new Set(['members', 'events']);
+const RESERVED_FIRST_CLASS_SLUGS = new Set([
+  'members',
+  'events',
+  'gallery',
+  'member-benefits',
+]);
 
 function isReservedSlugPath(slug: string[]): boolean {
   return slug.length === 1 && RESERVED_FIRST_CLASS_SLUGS.has(slug[0]);
@@ -241,17 +248,6 @@ function extractTitleFromDescription(description: string): string {
   // Clean up and truncate if needed
   const cleaned = firstLine.replace(/^[^a-zA-Z]*/, '').trim();
   return cleaned.length > 60 ? cleaned.substring(0, 57) + '...' : cleaned || 'RHBA Event';
-}
-
-// Get featured content
-export function getFeaturedEvent(): CalendarEvent | undefined {
-  // Look for the shred event or next major event
-  const upcoming = getUpcomingEvents();
-  const shredEvent = upcoming.find(e => 
-    e.description?.toLowerCase().includes('shred') || 
-    e.title.toLowerCase().includes('shred')
-  );
-  return shredEvent || upcoming[0];
 }
 
 // Get all navigation links from raw nav data

@@ -168,3 +168,25 @@ export interface HomeFeedItem {
 export interface HomeFeedData {
   items: HomeFeedItem[];
 }
+
+/** Organization photos manifest — see `data/photos.json` and `scripts/build-photos-manifest.mjs`. */
+export type PhotoCategory = 'hero' | 'event' | 'themed' | 'decor';
+
+export interface PhotoEntry {
+  src: string;
+  category: PhotoCategory;
+  alt: string;
+  width: number;
+  height: number;
+  tags?: string[];
+  caption?: string;
+  /** For `category: "themed"` — key passed to `<ThemedBanner themedKey="…" />`. */
+  themedKey?: string;
+  /** First hero slide uses `priority` when true. */
+  priority?: boolean;
+}
+
+export interface PhotosData {
+  generatedAt?: string;
+  photos: PhotoEntry[];
+}

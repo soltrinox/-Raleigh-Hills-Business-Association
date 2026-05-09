@@ -2,21 +2,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
-import { EventsListClient } from '@/components/events/EventsListClient';
-import { EventsPhotoCarousel } from '@/components/events/EventsPhotoCarousel';
+import { GalleryMasonry } from '@/components/photos/GalleryMasonry';
 import { Button } from '@/components/ui/button';
-import { getExpandedUpcomingEventCards } from '@/lib/events';
-import { getEventPhotos } from '@/lib/photos';
+import { getGalleryPhotos } from '@/lib/photos';
 
 export const metadata: Metadata = {
-  title: 'Events',
+  title: 'Gallery',
   description:
-    'Upcoming RHBA events from data/events.json (including expanded recurring meetings).',
+    'Photo gallery from Raleigh Hills Business Association events and programs.',
 };
 
-export default function EventsPage() {
-  const events = getExpandedUpcomingEventCards(8);
-  const eventPhotos = getEventPhotos();
+export default function GalleryPage() {
+  const photos = getGalleryPhotos();
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -25,26 +22,25 @@ export default function EventsPage() {
         <section className="bg-primary py-12 md:py-16">
           <div className="container mx-auto px-4">
             <h1 className="font-serif text-4xl font-bold text-primary-foreground md:text-5xl">
-              Events
+              Gallery
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-primary-foreground/85">
-              Upcoming dates combine manual entries and extracted listings from{' '}
-              <code className="rounded bg-primary-foreground/15 px-1.5 py-0.5 text-sm">
-                data/events.json
-              </code>
-              , with simple recurring rules expanded the same way as the calendar.
+              Moments from RHBA meetings, outreach, and community events. Open a photo to see it larger.
             </p>
             <Button variant="secondary" className="mt-6" asChild>
-              <Link href="/calendar">Open full calendar</Link>
+              <Link href="/events">Back to events</Link>
             </Button>
           </div>
         </section>
         <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
-            <EventsListClient events={events} />
+            {photos.length === 0 ? (
+              <p className="text-muted-foreground">No photos in the gallery yet.</p>
+            ) : (
+              <GalleryMasonry photos={photos} />
+            )}
           </div>
         </section>
-        <EventsPhotoCarousel photos={eventPhotos} />
       </main>
       <Footer />
     </div>

@@ -9,17 +9,18 @@ import {
   Users, 
   Building2, 
   Heart, 
-  Recycle, 
-  Backpack, 
-  ShoppingBag,
+  Backpack,
   Coffee,
   Video,
   MapPin
 } from "lucide-react"
 import { format, parseISO, isValid } from "date-fns"
-import { getFeaturedEvent, getSiteMetadata, getHomeFeed } from "@/lib/data"
+import { getSiteMetadata, getHomeFeed } from "@/lib/data"
 import { loadMembers } from "@/lib/members"
 import { FeaturedMembersCarousel } from "@/components/home/FeaturedMembersCarousel"
+import { HeroPhotoFader } from "@/components/home/HeroPhotoFader"
+import { SocialFollowBanner } from "@/components/social/SocialFollowBanner"
+import { ThemedBanner } from "@/components/photos/ThemedBanner"
 import { CalendarMini } from "@/components/calendar/CalendarMini"
 import { EventCard } from "@/components/events/EventCard"
 import {
@@ -27,7 +28,14 @@ import {
   buildCalendarGrid,
   ymFromSearchParam,
 } from "@/lib/calendar-grid"
-import { getEventsForMonth, getRecentUpcoming } from "@/lib/events"
+import {
+  eventHref,
+  getEventsForMonth,
+  getNextUpcomingBannerEvent,
+  getRecentUpcoming,
+} from "@/lib/events"
+import { getHeroPhotos } from "@/lib/photos"
+import { buildHeroSlides } from "@/lib/hero-slides"
 
 export default async function HomePage({
   searchParams,
@@ -35,9 +43,10 @@ export default async function HomePage({
   searchParams: Promise<{ calYm?: string }>
 }) {
   const site = getSiteMetadata()
-  const featuredEvent = getFeaturedEvent()
+  const bannerEvent = getNextUpcomingBannerEvent()
   const homeFeed = getHomeFeed()
   const members = loadMembers()
+  const heroSlides = buildHeroSlides(getHeroPhotos(), members)
 
   const sp = await searchParams
   const today = new Date()
@@ -59,58 +68,67 @@ export default async function HomePage({
         <section className="relative overflow-hidden bg-primary py-24 lg:py-32">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-serif text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-                {site.name}
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
-                {site.description}
-              </p>
-              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link href="/join">
-                    Join Our Association
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-                  <Link href="/members">
-                    Member Directory
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-                  <Link href="/calendar">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    View calendar
-                  </Link>
-                </Button>
+            <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+              <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
+                <h1 className="text-balance font-serif text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+                  {site.name}
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80 sm:text-xl">
+                  {site.description}
+                </p>
+                <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+                  <Button size="lg" variant="secondary" asChild>
+                    <Link href="/join">
+                      Join Our Association
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                    <Link href="/members">
+                      Member Directory
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                    <Link href="/calendar">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      View calendar
+                    </Link>
+                  </Button>
+                </div>
               </div>
+              {heroSlides.length > 0 ? (
+                <div className="flex justify-center lg:justify-end">
+                  <HeroPhotoFader slides={heroSlides} />
+                </div>
+              ) : null}
             </div>
           </div>
         </section>
 
         {/* Featured Event Banner */}
-        {featuredEvent && (
+        {bannerEvent && (
           <section className="bg-accent py-6">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
                 <div className="flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-background">
-                    <Recycle className="h-6 w-6 text-primary" />
+                    <Calendar className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-accent-foreground/70">Upcoming Event</p>
                     <p className="font-semibold text-accent-foreground">
-                      14th Annual Recycle/Shred Event - April 18, 2026
+                      {bannerEvent.title} - {format(parseISO(bannerEvent.start), "MMMM d, yyyy")}
                     </p>
                   </div>
                 </div>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/events/recycle-shred-2026">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                {bannerEvent.slug ? (
+                  <Button variant="outline" size="sm" asChild>
+                    <Link href={eventHref(bannerEvent.slug)}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                ) : null}
               </div>
             </div>
           </section>
@@ -298,9 +316,7 @@ export default async function HomePage({
 
             <div className="mt-16 grid gap-8 md:grid-cols-3">
               <Card className="overflow-hidden">
-                <div className="flex h-48 items-center justify-center bg-primary/10">
-                  <Recycle className="h-16 w-16 text-primary" />
-                </div>
+                <ThemedBanner themedKey="shred-event" className="rounded-none sm:h-52" />
                 <CardHeader>
                   <CardTitle>Recycle/Shred Event</CardTitle>
                 </CardHeader>
@@ -336,9 +352,7 @@ export default async function HomePage({
               </Card>
 
               <Card className="overflow-hidden">
-                <div className="flex h-48 items-center justify-center bg-primary/10">
-                  <ShoppingBag className="h-16 w-16 text-primary" />
-                </div>
+                <ThemedBanner themedKey="shop-with-a-cop" className="rounded-none sm:h-52" />
                 <CardHeader>
                   <CardTitle>Shop With A Cop</CardTitle>
                 </CardHeader>
@@ -370,7 +384,8 @@ export default async function HomePage({
             </div>
 
             <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <Card className="border-l-4 border-l-primary">
+              <Card className="overflow-hidden border-l-4 border-l-primary">
+                <ThemedBanner themedKey="coffee-meetup" className="rounded-none sm:h-44" />
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Coffee className="h-4 w-4" />
@@ -384,7 +399,8 @@ export default async function HomePage({
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
+              <Card className="overflow-hidden border-l-4 border-l-primary">
+                <ThemedBanner themedKey="zoom-calls" className="rounded-none sm:h-44" />
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Video className="h-4 w-4" />
@@ -398,7 +414,8 @@ export default async function HomePage({
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
+              <Card className="overflow-hidden border-l-4 border-l-primary">
+                <ThemedBanner themedKey="business-lunch" className="rounded-none sm:h-44" />
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="h-4 w-4" />
@@ -479,6 +496,8 @@ export default async function HomePage({
             </p>
           </div>
         </section>
+
+        <SocialFollowBanner />
 
         <FeaturedMembersCarousel members={members} />
       </main>

@@ -14,6 +14,7 @@
     "members:geocode:all": "node scripts/geocode-members.mjs --file=data/members.json --file=data/members2.json",
     "members:validate-geocode": "node scripts/validate-member-geocode.mjs",
     "events:validate": "node scripts/events-validate.cjs",
+    "photos:manifest": "node scripts/build-photos-manifest.mjs",
     "data:rhba": "node scripts/parse-rhba-xlsx.mjs",
     "deploy": "npx vercel deploy",
     "deploy:prod": "npx vercel deploy --prod"
@@ -79,6 +80,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
+    "image-size": "^2.0.2",
     "postcss": "^8.5",
     "tailwindcss": "^4.2.0",
     "tw-animate-css": "1.3.3",

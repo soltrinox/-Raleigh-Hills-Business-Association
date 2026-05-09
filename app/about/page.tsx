@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { ArrowRight, Target, Eye, Heart, Users } from "lucide-react"
+import { ArrowRight, Target, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { DecorPhoto } from "@/components/photos/DecorPhoto"
 import { getSiteMetadata } from "@/lib/data"
 
 export default function AboutPage() {
@@ -67,6 +68,13 @@ export default function AboutPage() {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+            <div className="mt-12 max-w-3xl mx-auto">
+              <DecorPhoto
+                seed="about-mission-aside"
+                aspect="16/9"
+                caption="RHBA members connect at regular meetings and community programs."
+              />
             </div>
           </div>
         </section>

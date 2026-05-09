@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, Video, Instagram, Facebook } from "lucide-react"
+import { Mail, MapPin, Phone, Video } from "lucide-react"
 import { navConfig, getSiteMetadata } from "@/lib/data"
+import { SocialFollowButtons } from "@/components/social/SocialFollowButtons"
 
 export function Footer() {
   const site = getSiteMetadata()
@@ -45,25 +46,14 @@ export function Footer() {
                   Join on Zoom
                 </a>
               </div>
-              <div className="flex items-center gap-3 pt-2">
-                <a
-                  href={site.social.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-md border border-background/30 p-2 hover:bg-background/10 transition-colors"
-                  aria-label="RHBA on Instagram"
-                >
-                  <Instagram className="h-5 w-5" aria-hidden />
-                </a>
-                <a
-                  href={site.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-md border border-background/30 p-2 hover:bg-background/10 transition-colors"
-                  aria-label="RHBA on Facebook"
-                >
-                  <Facebook className="h-5 w-5" aria-hidden />
-                </a>
+              <div className="pt-4">
+                <p className="mb-3 text-sm font-medium text-background/80">Follow us</p>
+                <SocialFollowButtons
+                  instagramUrl={site.social.instagram}
+                  facebookUrl={site.social.facebook}
+                  size="md"
+                  surface="onDark"
+                />
               </div>
             </div>
           </div>

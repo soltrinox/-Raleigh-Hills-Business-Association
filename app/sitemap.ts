@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/calendar',
     '/events',
+    '/gallery',
     '/members',
     '/join',
     '/contact',
